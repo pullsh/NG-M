@@ -1,17 +1,13 @@
 {
-    "providerFeatures": [
-        {
-            "title": "Fast Internet",
-            "description": "Enjoy speeds up to 1 Gbps with our fiber-optic network."
-        },
-        {
-            "title": "24/7 Support",
-            "description": "Our support team is always available to assist you."
-        }
-    ],
-    "productImage": "images/309695_0_hpoykn.webp",
-    "productSpecs": {
-        "title": "Super Router 3000",
-        "description": "Advanced Wi-Fi 6 technology with enhanced range and speed."
+  "providerFeatures": [
+    {
+      "title": "39,99€",
+      "description": "monatlich"
     }
+  ],
+  "productImage": "",
+  "productSpecs": {
+    "title": "iPhone 16",
+    "description": "Ab 128Gb"
+  }
 }
