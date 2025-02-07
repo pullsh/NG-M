@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Create JSON File</h2>
+    
+    <label for="provider-title">Provider Feature Title:</label>
+    <input type="text" id="provider-title">
+    
+    <label for="provider-description">Provider Feature Description:</label>
+    <textarea id="provider-description"></textarea>
+    
+    <label for="product-image">Product Image Filename:</label>
+    <input type="text" id="product-image">
+    
+    <label for="product-title">Product Specs Title:</label>
+    <input type="text" id="product-title">
+    
+    <label for="product-description">Product Specs Description:</label>
+    <textarea id="product-description"></textarea>
+    
+    <button onclick="downloadJSON()">Download JSON</button>
+    
+    <script>
+        function downloadJSON() {
+            const data = {
+                providerFeatures: [{
+                    title: document.getElementById('provider-title').value,
+                    description: document.getElementById('provider-description').value
+                }],
+                productImage: document.getElementById('product-image').value,
+                productSpecs: {
+                    title: document.getElementById('product-title').value,
+                    description: document.getElementById('product-description').value
+                }
+            };
+            
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'data.json';
+            a.click();
+        }
+    </script>
+</body>
+</html>
