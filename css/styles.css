@@ -45,13 +45,13 @@ body {
 }
 
 .partner-cert, .provider-logo {
-    width: 48%; /* Adjust spacing inside 33% container */
-    max-width: 80px;
+    width: 33%; /* Adjust spacing inside 33% container */
+    max-width: 50%;
     height: auto;
 }
 
 /* Product Image */
-.product-image {
+.middle-product-image {
     width: 27%;
     display: flex;
     flex-direction: column;
@@ -80,7 +80,7 @@ img {
 }
 
 .product-image-spin {
-    max-width: 70%;
+    max-width: 40%;
 }
 
 /* Text styles */
@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, p {
     animation: slideInRight 1s ease-out;
 }
 
-.product-image {
+.middle-product-image {
     animation: slideInBottom 1s ease-out, hoverFloat 4s infinite ease-in-out 1s;
 }
 
