@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+/* Background Video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Container for content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 3% 0;
+    box-sizing: border-box;
+}
+
+/* Provider Features */
+.provider-features {
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* Partner & Logo Section */
+.partner-logo-container {
+    width: 33%;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.partner-cert, .provider-logo {
+    width: 48%; /* Adjust spacing inside 33% container */
+    max-width: 80px;
+    height: auto;
+}
+
+/* Product Image */
+.product-image {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Product Specs */
+.product-specs {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Individual Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-image img {
+    max-width: 90%;
+}
+
+.product-image-spin {
+    max-width: 70%;
+}
+
+/* Text styles */
+h1, h2, h3, h4, h5, p {
+    margin: 5px 0;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInBottom {
+    from { transform: translateY(100%); opacity: 0; }
+    80% { transform: translateY(-5%); }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes hoverFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3%); }
+    100% { transform: translateY(0); }
+}
+
+/* Apply animations */
+.provider-features {
+    animation: slideInLeft 1s ease-out;
+}
+
+.product-specs {
+    animation: slideInRight 1s ease-out;
+}
+
+.product-image {
+    animation: slideInBottom 1s ease-out, hoverFloat 4s infinite ease-in-out 1s;
+}
+
+/* Additional styles for missing classes */
+.feature-data-limit, .feature-price-big1, .feature-price-big2, .feature-monthly, .feature-price-small, .feature-onetime, .feature-annotation {
+    margin: 10px 0;
+}
+
+.feature-price-big1, .feature-price-big2 {
+    font-size: 2em;
+}
+
+.feature-price-small {
+    font-size: 1.5em;
+}
+
+.feature-annotation {
+    font-size: 1em;
+}

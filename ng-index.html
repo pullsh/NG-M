@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Gen Slide 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <video class="background-video" autoplay loop muted>
+        <source src="videos/Bildschirm2_Full_1440p.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="section provider-features">
+            <div class="partner-logo-container">
+                <img id="partnerCert" class="partner-cert" src="" alt="Partner Certification">
+                <img id="providerLogo" class="provider-logo" src="" alt="Provider Logo">
+            </div>
+            <img id="featureDataLimit" class="feature-data-limit" src="" alt="Data Limit">
+            <h1 id="featurePriceBig1" class="feature-price-big1"></h1>
+            <h2 id="featurePriceBig2" class="feature-price-big2"></h2>
+            <img id="featureMonthly" class="feature-monthly" src="" alt="Monthly Plan">
+            <h3 id="featurePriceSmall" class="feature-price-small"></h3>
+            <img id="featureOnetime" class="feature-onetime" src="" alt="One-time Fee">
+            <p id="featureAnnotation" class="feature-annotation"></p>
+        </div>
+        <div class="middle product-image">
+            <img id="productImage" class="product-image" src="" alt="Product Image">
+            <img id="productImageSpin" class="product-image-spin" src="" alt="Spinning Product Image">
+        </div>
+        <div class="right product-specs">
+            <img id="productSpecsLine" class="product-specs-line" src="" alt="Product Specs Line">
+            <h4 id="productName" class="product-name"></h4>
+            <h5 id="productSpecs" class="product-specs"></h5>
+        </div>
+    </div>
+    
+    <script>
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('partnerCert').src = data.partnerCert;
+                document.getElementById('providerLogo').src = data.providerLogo;
+                document.getElementById('featureDataLimit').src = data.featureDataLimit;
+                document.getElementById('featurePriceBig1').textContent = data.featurePriceBig1;
+                document.getElementById('featurePriceBig2').textContent = data.featurePriceBig2;
+                document.getElementById('featureMonthly').src = data.featureMonthly;
+                document.getElementById('featurePriceSmall').textContent = data.featurePriceSmall;
+                document.getElementById('featureOnetime').src = data.featureOnetime;
+                document.getElementById('featureAnnotation').textContent = data.featureAnnotation;
+                document.getElementById('productImage').src = data.productImage;
+                document.getElementById('productImageSpin').src = data.productImageSpin;
+                document.getElementById('productSpecsLine').src = data.productSpecsLine;
+                document.getElementById('productName').textContent = data.productName;
+                document.getElementById('productSpecs').textContent = data.productSpecs;
+            })
+            .catch(error => console.error('Error loading JSON data:', error));
+    </script>
+</body>
+</html>
