@@ -38,14 +38,41 @@ body {
 
 /* Partner & Logo Section */
 .partner-logo-container {
-    width: 66%;
-    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .partner-cert, .provider-logo {
-    width: 33%; /* Adjust spacing inside 33% container */
-    max-width: 50%;
+    width: 50%; /* Adjust spacing inside 33% container */
+    max-width: 70%;
     height: auto;
+}
+
+/* Feature Price Big */
+.feature-price-big-columns {
+    display: flex;
+    width: 100%;
+}
+
+.feature-price-big-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.feature-price-big-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Feature Price Small */
+.feature-price-small-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /* Product Image */
@@ -58,25 +85,6 @@ body {
     position: relative;
 }
 
-/* Product Specs */
-.product-specs {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.product-specs-line {
-    width: 15%;
-}
-
-/* Individual Image Styles */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 .product-image img {
     max-width: 90%;
 }
@@ -85,8 +93,33 @@ img {
     max-width: 40%;
 }
 
+/* Product Specs */
+.product-specs {
+    width: 30%;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.product-specs-line {
+    width: 20%;
+}
+
+.product-specs-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Individual Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Text styles */
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p , ul {
     margin: 5px 0;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -135,29 +168,35 @@ h1, h2, h3, h4, h5, p {
 
 .feature-price-big1 {
     font-size: 8em;
+    text-align: right;
 }
 
 .feature-price-big2 {
     font-size: 4em;
+    text-align: left;
 }
 
 .feature-monthly {
     border: 0.15em solid white;
     padding: 0.5em;
     font-size: 1em;
+    text-align: center;
 }
 
 .feature-price-small {
     font-size: 3em;
+    text-align: right;
 }
 
 .feature-onetime {
     border: 0.15em solid white;
     padding: 0.5em;
     font-size: 1em;
+    text-align: center;
 }
 
 .feature-annotation {
     font-size: 1em;
     list-style-type: disc;
+    text-align: right;
 }
