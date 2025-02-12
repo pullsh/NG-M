@@ -32,15 +32,15 @@ body {
     width: 37%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     text-align: right;
 }
 
 /* Partner & Logo Section */
 .partner-logo-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .partner-cert, .provider-logo {
@@ -52,6 +52,8 @@ body {
 /* Feature Price Big */
 .feature-price-big-columns {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
 }
 
@@ -64,14 +66,15 @@ body {
 .feature-price-big-right {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 /* Feature Price Small */
 .feature-price-small-columns {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
 }
 
@@ -97,7 +100,8 @@ body {
 .product-specs {
     width: 30%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-start;
     text-align: left;
 }
 
@@ -108,8 +112,8 @@ body {
 .product-specs-right {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 /* Individual Image Styles */
