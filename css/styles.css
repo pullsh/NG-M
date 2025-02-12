@@ -206,8 +206,11 @@ h1, h2, h3, h4, h5, p , ul {
     text-align: right;
 }
 
+.product-name {
+    font-size: 4em;
+}
+
 .product-specs-list {
-    font-size: 1em;
+    font-size: 2em;
     list-style-type: disc;
-    text-align: right;
 }
