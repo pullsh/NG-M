@@ -38,10 +38,8 @@ body {
 
 /* Partner & Logo Section */
 .partner-logo-container {
-    width: 33%;
+    width: 66%;
     float: right;
-    display: flex;
-    justify-content: space-between;
 }
 
 .partner-cert, .provider-logo {
@@ -67,6 +65,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+}
+
+.product-specs-line {
+    width: 10%;
 }
 
 /* Individual Image Styles */
@@ -128,15 +130,19 @@ h1, h2, h3, h4, h5, p {
 
 /* Additional styles for missing classes */
 .feature-data-limit, .feature-price-big1, .feature-price-big2, .feature-monthly, .feature-price-small, .feature-onetime, .feature-annotation {
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
-.feature-price-big1, .feature-price-big2 {
-    font-size: 2em;
+.feature-price-big1 {
+    font-size: 8em;
+}
+
+.feature-price-big2 {
+    font-size: 4em;
 }
 
 .feature-price-small {
-    font-size: 1.5em;
+    font-size: 3em;
 }
 
 .feature-annotation {
