@@ -68,7 +68,7 @@ body {
 }
 
 .product-specs-line {
-    width: 10%;
+    width: 15%;
 }
 
 /* Individual Image Styles */
@@ -94,17 +94,17 @@ h1, h2, h3, h4, h5, p {
 
 /* Animations */
 @keyframes slideInLeft {
-    from { transform: translateX(-100%); opacity: 0; }
+    from { transform: translateX(-100%); opacity: 1; }
     to { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInRight {
-    from { transform: translateX(100%); opacity: 0; }
+    from { transform: translateX(100%); opacity: 1; }
     to { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInBottom {
-    from { transform: translateY(100%); opacity: 0; }
+    from { transform: translateY(100%); opacity: 1; }
     80% { transform: translateY(-5%); }
     to { transform: translateY(0); opacity: 1; }
 }
@@ -129,8 +129,8 @@ h1, h2, h3, h4, h5, p {
 }
 
 /* Additional styles for missing classes */
-.feature-data-limit, .feature-price-big1, .feature-price-big2, .feature-monthly, .feature-price-small, .feature-onetime, .feature-annotation {
-    margin: 5px 0;
+.feature-data-limit {
+    width: 40%;
 }
 
 .feature-price-big1 {
@@ -141,10 +141,23 @@ h1, h2, h3, h4, h5, p {
     font-size: 4em;
 }
 
+.feature-monthly {
+    border: 0.15em solid white;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
 .feature-price-small {
     font-size: 3em;
 }
 
+.feature-onetime {
+    border: 0.15em solid white;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
 .feature-annotation {
     font-size: 1em;
+    list-style-type: disc;
 }

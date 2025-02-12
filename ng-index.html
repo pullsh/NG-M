@@ -19,9 +19,9 @@
             <img id="featureDataLimit" class="feature-data-limit" src="" alt="Data Limit">
             <h1 id="featurePriceBig1" class="feature-price-big1"></h1>
             <h2 id="featurePriceBig2" class="feature-price-big2"></h2>
-            <img id="featureMonthly" class="feature-monthly" src="" alt="Monthly Plan">
+            <p id="featureMonthly" class="feature-monthly"></p>
             <h3 id="featurePriceSmall" class="feature-price-small"></h3>
-            <img id="featureOnetime" class="feature-onetime" src="" alt="One-time Fee">
+            <p id="featureOnetime" class="feature-onetime"></p>
             <p id="featureAnnotation" class="feature-annotation"></p>
         </div>
         <div class="middle-product-image">
@@ -31,7 +31,7 @@
         <div class="right product-specs">
             <img id="productSpecsLine" class="product-specs-line" src="" alt="Product Specs Line">
             <h4 id="productName" class="product-name"></h4>
-            <h5 id="productSpecs" class="product-specs"></h5>
+            <ul id="productSpecs" class="product-specs"></ul>
         </div>
     </div>
     
@@ -44,9 +44,9 @@
                 document.getElementById('featureDataLimit').src = data.featureDataLimit;
                 document.getElementById('featurePriceBig1').textContent = data.featurePriceBig1;
                 document.getElementById('featurePriceBig2').textContent = data.featurePriceBig2;
-                document.getElementById('featureMonthly').src = data.featureMonthly;
+                document.getElementById('featureMonthly').textcontent = data.featureMonthly;
                 document.getElementById('featurePriceSmall').textContent = data.featurePriceSmall;
-                document.getElementById('featureOnetime').src = data.featureOnetime;
+                document.getElementById('featureOnetime').textcontent = data.featureOnetime;
                 document.getElementById('featureAnnotation').textContent = data.featureAnnotation;
                 document.getElementById('productImage').src = data.productImage;
                 document.getElementById('productImageSpin').src = data.productImageSpin;
