@@ -1,17 +1,17 @@
 /* General Styles */
 @font-face {
     font-family: 'Open Sans CondBold';
-    src: url('Open Sans/OpenSans-CondBold.ttf');
+    src: url('../Open Sans/OpenSans-CondBold.ttf');
 }
 
 @font-face {
     font-family: 'Open Sans CondLightitalic';
-    src: url('OpenSans-CondLightitalic.ttf');
+    src: url('../Open Sans/OpenSans-CondLightitalic.ttf');
 }
 
 @font-face {
     font-family: 'Open Sans CondLight';
-    src: url('OpenSans-CondLight.ttf');
+    src: url('../Open Sans/OpenSans-CondLight.ttf');
 }
 
 body {
