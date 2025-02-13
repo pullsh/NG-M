@@ -47,7 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     text-align: right;
 }
 
@@ -62,7 +62,7 @@ body {
     width: 33%; /* Adjust spacing inside 37% container */
     max-width: 66%;
     height: auto;
-    margin-inline-end: 5%;
+    margin-inline-start: 5%;
 }
 
 /* Feature Price Big */
@@ -116,8 +116,8 @@ body {
 .product-specs {
     width: 30%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
     text-align: left;
 }
 
@@ -128,8 +128,8 @@ body {
 .product-specs-right {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 /* Individual Image Styles */
@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, p , ul {
 }
 
 .feature-monthly {
-    border: 0.15em solid white;
+    border: 0.1em solid white;
     max-width: 50%;
     padding: 0.4em;
     font-size: 1em;
@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, p , ul {
 }
 
 .feature-onetime {
-    border: 0.15em solid white;
+    border: 0.1em solid white;
     padding: 0.4em;
     font-size: 1em;
     text-transform: capitalize;
@@ -223,7 +223,7 @@ h1, h2, h3, h4, h5, p , ul {
 }
 
 .feature-annotation {
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: 'Open Sans CondLight';
     text-align: right;
 }
