@@ -1,4 +1,19 @@
 /* General Styles */
+@font-face {
+    font-family: 'Open Sans CondBold';
+    src: url(OpenSans-CondBold.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans CondLightitalic';
+    src: url(OpenSans-CondLightitalic.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans CondLight';
+    src: url(OpenSans-CondLight.ttf);
+}
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -47,7 +62,7 @@ body {
     width: 33%; /* Adjust spacing inside 37% container */
     max-width: 66%;
     height: auto;
-    margin-inline: 20%;
+    margin-inline-end: 5%;
 }
 
 /* Feature Price Big */
@@ -174,11 +189,13 @@ h1, h2, h3, h4, h5, p , ul {
 
 .feature-price-big1 {
     font-size: 8em;
+    font-family: 'Open Sans CondBold';
     text-align: right;
 }
 
 .feature-price-big2 {
     font-size: 4em;
+    font-family: 'Open Sans CondBold';
     text-align: left;
 }
 
@@ -193,6 +210,7 @@ h1, h2, h3, h4, h5, p , ul {
 
 .feature-price-small {
     font-size: 3em;
+    font-family: 'Open Sans CondBold';
     text-align: right;
 }
 
@@ -206,14 +224,17 @@ h1, h2, h3, h4, h5, p , ul {
 
 .feature-annotation {
     font-size: 1em;
+    font-family: 'Open Sans CondLight';
     text-align: right;
 }
 
 .product-name {
     font-size: 3em;
+    font-family: 'Open Sans CondBold';
 }
 
 .product-specs-list {
     font-size: 2em;
-    list-style-type: circle;
+    font-family: 'Open Sans CondLight';
+    list-style-type: disc;
 }
