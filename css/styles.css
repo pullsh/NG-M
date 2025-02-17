@@ -203,7 +203,7 @@ h1, h2, h3, h4, h5, p , ul {
     padding: 0.4vw;
     font-size: 1vw;
     text-transform: uppercase;
-    letter-spacing: 3vw;
+    letter-spacing: 3%;
     text-align: center;
 }
 
@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, p , ul {
     padding: 0.4vw;
     font-size: 1vw;
     text-transform: uppercase;
-    letter-spacing: 3vw;
+    letter-spacing: 3%;
     text-align: center;
 }
 
