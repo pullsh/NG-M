@@ -109,10 +109,6 @@ body {
     max-width: 90%;
 }
 
-.product-image-spin {
-    max-width: 40%;
-}
-
 /* Product Specs */
 .product-specs {
     width: 25%;
@@ -206,7 +202,8 @@ h1, h2, h3, h4, h5, p , ul {
     max-width: 50%;
     padding: 0.4vw;
     font-size: 1vw;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    letter-spacing: 3vw;
     text-align: center;
 }
 
@@ -221,7 +218,8 @@ h1, h2, h3, h4, h5, p , ul {
     border: 0.1vw solid white;
     padding: 0.4vw;
     font-size: 1vw;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    letter-spacing: 3vw;
     text-align: center;
 }
 
