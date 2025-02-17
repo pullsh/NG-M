@@ -81,7 +81,14 @@
                 document.getElementById('productImage').src = data.productImage;
                 document.getElementById('productSpecsLine').src = data.productSpecsLine;
                 document.getElementById('productName').textContent = data.productName;
-                document.getElementById('productSpecsList').textContent = data.productSpecsList;
+
+                const specsList = document.getElementById('productSpecsList');
+                specsList.innerHTML = ''; // Clear existing content
+                data.productSpecsList.forEach(spec => {
+                    const li = document.createElement('li');
+                    li.textContent = spec;
+                    specsList.appendChild(li);
+                });
             })
             .catch(error => console.error('Error loading JSON data:', error));
     </script>

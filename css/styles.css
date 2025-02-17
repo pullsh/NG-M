@@ -197,13 +197,14 @@ h1, h2, h3, h4, h5, p , ul {
     text-align: left;
 }
 
-.feature-monthly {
+.feature-monthly , .feature-onetime {
     border: 0.1vw solid white;
     max-width: 50%;
-    padding: 0.4vw;
-    font-size: 1vw;
+    padding: 0.3vw;
+    font-size: 0.7vw;
     text-transform: uppercase;
-    letter-spacing: 3%;
+    letter-spacing: 0.15vw;
+    line-height: 2vh;
     text-align: center;
 }
 
@@ -212,15 +213,6 @@ h1, h2, h3, h4, h5, p , ul {
     font-family: 'Open Sans CondBold';
     text-align: right;
     margin-inline-start: 5%;
-}
-
-.feature-onetime {
-    border: 0.1vw solid white;
-    padding: 0.4vw;
-    font-size: 1vw;
-    text-transform: uppercase;
-    letter-spacing: 3%;
-    text-align: center;
 }
 
 .feature-annotation {
