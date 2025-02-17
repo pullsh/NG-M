@@ -181,8 +181,7 @@ h1, h2, h3, h4, h5, p , ul {
 
 /* Additional styles for missing classes */
 .feature-data-limit {
-    justify-content: flex-end;
-    width: 40%;
+    width: 80%;
 }
 
 .feature-price-big1 {
@@ -226,8 +225,8 @@ h1, h2, h3, h4, h5, p , ul {
     font-family: 'Open Sans CondBold';
 }
 
-.product-specs-list {
-    font-size: 2vw;
+.product-specs-list , .provider-specs-list {
+    font-size: 1vw;
     font-family: 'Open Sans CondLight';
     list-style-type: disc;
 }

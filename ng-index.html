@@ -51,16 +51,22 @@
                     <li>Spec 10</li>
                     <li>Spec 11</li>
                     <li>Spec 12</li>
-                    <li>Spec 13</li>
-                    <li>Spec 14</li>
-                    <li>Spec 15</li>
-                    <li>Spec 16</li>
-                    <li>Spec 17</li>
-                    <li>Spec 18</li>
-                    <li>Spec 19</li>
-                    <li>Spec 20</li>
                 </ul>
                 <img id="featureDataLimit" class="feature-data-limit" src="" alt="Data Limit">
+                <ul id="providerSpecsList" class="provider-specs-list">
+                    <li>Spec 1</li>
+                    <li>Spec 2</li>
+                    <li>Spec 3</li>
+                    <li>Spec 4</li>
+                    <li>Spec 5</li>
+                    <li>Spec 6</li>
+                    <li>Spec 7</li>
+                    <li>Spec 8</li>
+                    <li>Spec 9</li>
+                    <li>Spec 10</li>
+                    <li>Spec 11</li>
+                    <li>Spec 12</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -88,6 +94,14 @@
                     const li = document.createElement('li');
                     li.textContent = spec;
                     specsList.appendChild(li);
+                });
+
+                const providerspecsList = document.getElementById('providerSpecsList');
+                providerspecsList.innerHTML = ''; // Clear existing content
+                data.providerSpecsList.forEach(spec => {
+                    const li = document.createElement('li');
+                    li.textContent = spec;
+                    providerspecsList.appendChild(li);
                 });
             })
             .catch(error => console.error('Error loading JSON data:', error));
