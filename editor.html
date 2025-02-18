@@ -3,147 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON Editor</title>
+    <title>Editor</title>
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { width: 100vw; height: 100vh; overflow: hidden; font-family: Arial, sans-serif; }
-        .background-video {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100vw; height: 100vh;
-            object-fit: cover;
-            z-index: -1;
-        }
-        .container {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 3%;
-            color: white;
-        }
-        .section {
-            width: 37%;
+        .editor-container {
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .middle {
-            width: 27%;
-            display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        .editor-container input, .editor-container textarea {
+            width: 80%;
+            margin: 10px 0;
             padding: 10px;
-            border-radius: 5px;
+            font-size: 1rem;
         }
-        .right {
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        label, input, textarea {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        .drop-zone {
-            width: 100%;
-            height: 150px;
-            border: 2px dashed #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            cursor: pointer;
-            margin-top: 10px;
-            background: rgba(255, 255, 255, 0.2);
-        }
-        button {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+        .editor-container button {
             padding: 10px 20px;
-            background: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
+            font-size: 1rem;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <video class="background-video" autoplay loop muted>
-        <source src="videos/Bildschirm2_Full_1440p.mp4" type="video/mp4">
-    </video>
-    <div class="container">
-        <div class="section">
-            <label for="provider-title">Provider Feature Title:</label>
-            <input type="text" id="provider-title">
-            
-            <label for="provider-description">Provider Feature Description:</label>
-            <textarea id="provider-description"></textarea>
-        </div>
-        <div class="middle">
-            <label for="image-upload">Product Image:</label>
-            <div id="drop-zone" class="drop-zone">Drag & Drop Image Here</div>
-            <input type="file" id="image-upload" accept="image/*" style="display: none;">
-        </div>
-        <div class="right">
-            <label for="product-title">Product Specs Title:</label>
-            <input type="text" id="product-title">
-            
-            <label for="product-description">Product Specs Description:</label>
-            <textarea id="product-description"></textarea>
-        </div>
+    <div class="editor-container">
+        <h1>JSON Data Editor</h1>
+        <input type="text" id="providerLogo" placeholder="Provider Logo URL">
+        <input type="text" id="featureDataLimit" placeholder="Feature Data Limit URL">
+        <input type="text" id="featurePriceBig1" placeholder="Feature Price Big 1">
+        <input type="text" id="featurePriceBig2" placeholder="Feature Price Big 2">
+        <input type="text" id="featureMonthly" placeholder="Feature Monthly">
+        <input type="text" id="featurePriceSmall" placeholder="Feature Price Small">
+        <input type="text" id="featureOnetime" placeholder="Feature Onetime">
+        <textarea id="featureAnnotation" placeholder="Feature Annotation"></textarea>
+        <input type="text" id="productImage" placeholder="Product Image URL">
+        <input type="text" id="productSpecsLine" placeholder="Product Specs Line URL">
+        <input type="text" id="productName" placeholder="Product Name">
+        <textarea id="productSpecsList" placeholder="Product Specs List (comma separated)"></textarea>
+        <textarea id="providerSpecsList" placeholder="Provider Specs List (comma separated)"></textarea>
+        <button onclick="generateJSON()">Generate JSON</button>
+        <pre id="jsonOutput"></pre>
     </div>
-    
-    <button onclick="downloadJSON()">Download JSON</button>
-    
+
     <script>
-        document.getElementById('drop-zone').addEventListener('click', () => {
-            document.getElementById('image-upload').click();
-        });
-
-        document.getElementById('image-upload').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    localStorage.setItem('uploadedImage', e.target.result);
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-
-        function downloadJSON() {
+        function generateJSON() {
             const data = {
-                providerFeatures: [{
-                    title: document.getElementById('provider-title').value,
-                    description: document.getElementById('provider-description').value
-                }],
-                productImage: localStorage.getItem('uploadedImage') || '',
-                productSpecs: {
-                    title: document.getElementById('product-title').value,
-                    description: document.getElementById('product-description').value
-                }
+                providerLogo: document.getElementById('providerLogo').value,
+                featureDataLimit: document.getElementById('featureDataLimit').value,
+                featurePriceBig1: document.getElementById('featurePriceBig1').value,
+                featurePriceBig2: document.getElementById('featurePriceBig2').value,
+                featureMonthly: document.getElementById('featureMonthly').value,
+                featurePriceSmall: document.getElementById('featurePriceSmall').value,
+                featureOnetime: document.getElementById('featureOnetime').value,
+                featureAnnotation: document.getElementById('featureAnnotation').value,
+                productImage: document.getElementById('productImage').value,
+                productSpecsLine: document.getElementById('productSpecsLine').value,
+                productName: document.getElementById('productName').value,
+                productSpecsList: document.getElementById('productSpecsList').value.split(',').map(item => item.trim()),
+                providerSpecsList: document.getElementById('providerSpecsList').value.split(',').map(item => item.trim())
             };
-            
-            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'data.json';
-            a.click();
+
+            const jsonOutput = document.getElementById('jsonOutput');
+            jsonOutput.textContent = JSON.stringify(data, null, 4);
         }
     </script>
 </body>

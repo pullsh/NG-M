@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296.4 1631.1">
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259.84 1631.1">
   <defs>
     <style>
       .cls-1 {
@@ -14,9 +14,9 @@
       }
     </style>
   </defs>
-  <line class="cls-2" x1="284" y1="1604.5" x2="284" y2="26.6"/>
+  <line class="cls-2" x1="240.72" y1="1604.5" x2="240.72" y2="26.6"/>
   <g>
-    <line class="cls-2" x1="284" y1="476.67" x2="26.69" y2="476.67"/>
-    <circle class="cls-1" cx="27.44" cy="476.67" r="15.04"/>
+    <line class="cls-2" x1="240.72" y1="476.67" x2="33.41" y2="476.67"/>
+    <circle class="cls-1" cx="34.17" cy="476.67" r="15.04"/>
   </g>
 </svg>

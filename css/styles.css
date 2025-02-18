@@ -40,6 +40,7 @@ body {
 .container {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
@@ -59,7 +60,7 @@ body {
     align-items: center;
     justify-content: flex-end;
     height: 26vh;
-    padding-block-end: 6vh;
+    padding-block-end: 4vh;
 }
 
 .partner-cert {
@@ -185,12 +186,14 @@ h1, h2, h3, h4, h5, p , ul {
 
 .feature-price-big1 {
     font-size: 13vw;
+    line-height: 1vh;
     font-family: 'Open Sans CondBold';
     text-align: right;
 }
 
 .feature-price-big2 {
     font-size: 7vw;
+    line-height: 16vh;
     font-family: 'Open Sans CondBold';
     text-align: left;
 }
