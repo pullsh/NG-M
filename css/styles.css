@@ -14,6 +14,11 @@
     src: url('../Open Sans/OpenSans-CondLight.ttf');
 }
 
+@font-face {
+    font-family: 'Open Sans Semibold';
+    src: url('../Open Sans/OpenSans-Semibold.ttf');
+}
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -49,7 +54,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    text-align: right;
 }
 
 /* Partner & Logo Section */
@@ -60,31 +64,25 @@ body {
 }
 
 .partner-cert, .provider-logo {
-    width: 33%; /* Adjust spacing inside 37% container */
-    max-width: 66%;
-    height: auto;
-    margin-inline-start: 5%;
+    height: 26vh;
 }
 
 /* Feature Price Big */
 .feature-price-big-columns {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 100%;
 }
 
 .feature-price-big-left {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    position: relative;
+    left: 2.1vw;
 }
 
 .feature-price-big-right {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
 }
 
 /* Feature Price Small */
@@ -92,6 +90,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 3vw;
     width: 100%;
 }
 
@@ -128,6 +127,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 1vh;
 }
 
 /* Individual Image Styles */
@@ -191,16 +191,17 @@ h1, h2, h3, h4, h5, p , ul {
 }
 
 .feature-price-big2 {
-    font-size: 6vw;
+    font-size: 7vw;
     font-family: 'Open Sans CondBold';
     text-align: left;
 }
 
 .feature-monthly , .feature-onetime {
     border: 0.1vw solid white;
-    max-width: 50%;
+    width: min-content;
     padding: 0.3vw;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
+    font-family: 'Open Sans Semibold';
     text-transform: uppercase;
     letter-spacing: 0.15vw;
     line-height: 2vh;
@@ -208,14 +209,14 @@ h1, h2, h3, h4, h5, p , ul {
 }
 
 .feature-price-small {
-    font-size: 5vw;
+    font-size: 7vw;
     font-family: 'Open Sans CondBold';
     text-align: right;
-    margin-inline-start: 5%;
 }
 
 .feature-annotation {
     font-size: 1.5vw;
+    max-width: 85%;
     font-family: 'Open Sans CondLight';
     text-align: right;
 }
@@ -226,7 +227,7 @@ h1, h2, h3, h4, h5, p , ul {
 }
 
 .product-specs-list , .provider-specs-list {
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-family: 'Open Sans CondLight';
     list-style-type: disc;
 }
