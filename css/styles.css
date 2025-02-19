@@ -54,11 +54,9 @@ body {
     align-items: flex-end;
 }
 
-/* Partner & Logo Section */
 .provider-logo {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    border: 0.5vw solid white;
     height: 26vh;
     padding-block-end: 4vh;
 }
@@ -162,7 +160,7 @@ h1, h2, h3, h4, h5, p , ul {
 
 @keyframes hoverFloat {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-3%); }
+    50% { transform: translateY(-6%); }
     100% { transform: translateY(0); }
 }
 
@@ -199,7 +197,7 @@ h1, h2, h3, h4, h5, p , ul {
 }
 
 .feature-monthly , .feature-onetime {
-    border: 0.1vw solid white;
+    /*border: 0.1vw solid white;*/
     width: min-content;
     padding: 0.3vw;
     font-size: 0.8vw;
@@ -223,7 +221,7 @@ h1, h2, h3, h4, h5, p , ul {
     text-align: right;
 }
 
-.product-name {
+.product-name , .contract-name {
     font-size: 3vw;
     font-family: 'Open Sans CondBold';
 }
