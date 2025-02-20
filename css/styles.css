@@ -46,8 +46,8 @@ body {
 }
 
 .logo-animation {
-    animation: towards-topright 4s;
-    animation-delay: 500ms;
+    animation: towards-topright 2s;
+    animation-delay: 3s;
     animation-timing-function: ease;
     animation-fill-mode: both;
 }
@@ -166,23 +166,23 @@ h1, h2, h3, h4, h5, p , ul {
 
 /* Animations */
 @keyframes slideInLeft {
-    from { transform: translateX(-100%); opacity: 1; }
+    from { transform: translateX(-150%); opacity: 1; }
     to { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInRight {
-    from { transform: translateX(100%); opacity: 1; }
+    from { transform: translateX(150%); opacity: 1; }
     to { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInBottom {
-    from { transform: translateY(100%); opacity: 1; }
+    from { transform: translateY(150%); opacity: 1; }
     80% { transform: translateY(-5%); }
     to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes slideInTop {
-    from { transform: translateY(-100%); opacity: 1; }
+    from { transform: translateY(-150%); opacity: 1; }
     to { transform: translateY(0); opacity: 1; }
 }
 
@@ -204,8 +204,8 @@ h1, h2, h3, h4, h5, p , ul {
 }
 
 .middle-product-image {
-    animation: slideInBottom 1s ease-out 5s , hoverFloat 4s infinite ease-in-out 1s;
-    animation-fill-mode: both;
+    animation: slideInBottom 1s ease-out 5s 1 both, hoverFloat 4s infinite ease-in-out 1s;
+    /* animation-fill-mode: both; */
 }
 
 /* Additional styles for missing classes */
