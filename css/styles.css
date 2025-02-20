@@ -168,11 +168,13 @@ h1, h2, h3, h4, h5, p , ul {
 /* Animations */
 @keyframes slideInLeft {
     from { transform: translateX(-150%); opacity: 1; }
+    80% { transform: translateX(5%); }
     to { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInRight {
     from { transform: translateX(150%); opacity: 1; }
+    80% { transform: translateX(-5%); }
     to { transform: translateX(0); opacity: 1; }
 }
 
@@ -195,17 +197,17 @@ h1, h2, h3, h4, h5, p , ul {
 
 /* Apply animations */
 .provider-features {
-    animation: slideInLeft 700ms ease-out 4s;
-    animation-fill-mode: both;
+    animation: slideInLeft 700ms ease-out;
+    animation-fill-mode: forwards;
 }
 
 .product-specs {
-    animation: slideInRight 700ms ease-out 4s;
-    animation-fill-mode: both;
+    animation: slideInRight 700ms ease-out;
+    animation-fill-mode: forwards;
 }
 
 .middle-product-image {
-    animation: slideInBottom 700ms ease-out 4s 1 both, hoverFloat 4s infinite ease-in-out 1s;
+    animation: slideInBottom 700ms ease-out forwards, hoverFloat 4s infinite ease-in-out 1s;
     /* animation-fill-mode: both; */
 }
 

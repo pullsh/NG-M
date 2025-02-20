@@ -13,7 +13,7 @@
     </video>
     <div class="logo-header">
         <dotlottie-player id="logoAnimation" class="logo-animation" src="https://lottie.host/308cd2b6-38c1-4846-822e-58d2292b408c/RjIpRVuSKy.lottie" 
-            background="transparent" speed="0.5" style="width: 100%; height: 100%" direction="1" playMode="forward" autoplay>
+            background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" playMode="forward" autoplay>
         </dotlottie-player>
         <img id="partnerCert" class="partner-cert" src="" alt="Partner Certification">
     </div>
@@ -112,7 +112,7 @@
             .catch(error => console.error('Error loading JSON data:', error));
 
         document.getElementById('logoAnimation').addEventListener('complete', () => {
-            document.getElementById('partnerCert').style.animation = 'slideInTop 500ms ease-out forwards';
+            document.getElementById('partnerCert').style.animation = 'slideInTop 500ms ease forwards';
             document.querySelector('.provider-features').style.animation = 'slideInLeft 700ms ease-out forwards';
             document.querySelector('.product-specs').style.animation = 'slideInRight 700ms ease-out forwards';
             document.querySelector('.middle-product-image').style.animation = 'slideInBottom 700ms ease-out forwards, hoverFloat 4s infinite ease-in-out 1s';
