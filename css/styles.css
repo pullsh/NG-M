@@ -51,7 +51,7 @@ body {
 
 @keyframes towards-topright {
     from { transform: translate(-50%, -50%) scale(1); }
-    to { transform: translate(50vw, -50vh) scale(0.14); }
+    to { transform: translate(40vw, -40vh) scale(0.14); }
 }
 
 .partner-cert {
