@@ -49,16 +49,18 @@ body {
     animation: towards-topright 4s;
     animation-delay: 500ms;
     animation-timing-function: ease;
+    animation-fill-mode: both;
 }
 
 @keyframes towards-topright {
-    0% { transform: translateY(0) translateX(0); }
-    100% { transform: translateY(-100vh) translateX(100vw); }
+    0% { transform: translateY(0) translateX(0); width: 100%; }
+    100% { transform: translateY(-100vh) translateX(100vw); width: 14%; }
 }
 
 .partner-cert {
     height: 10vh;
     animation: slideInTop 500ms ease-out 5s;
+    animation-fill-mode: both;
 }
 
 /* Container for content */
@@ -193,14 +195,17 @@ h1, h2, h3, h4, h5, p , ul {
 /* Apply animations */
 .provider-features {
     animation: slideInLeft 1s ease-out 5s;
+    animation-fill-mode: both;
 }
 
 .product-specs {
     animation: slideInRight 1s ease-out 5s;
+    animation-fill-mode: both;
 }
 
 .middle-product-image {
-    animation: slideInBottom 1s ease-out 5s, hoverFloat 4s infinite ease-in-out 1s;
+    animation: slideInBottom 1s ease-out 5s , hoverFloat 4s infinite ease-in-out 1s;
+    animation-fill-mode: both;
 }
 
 /* Additional styles for missing classes */
