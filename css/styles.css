@@ -37,7 +37,6 @@ body {
 }
 
 .logo-header {
-    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -46,12 +45,13 @@ body {
 }
 
 .logo-animation {
-    animation: towards-topright 2s ease 3s forwards;
+    position: absolute;
+    animation: towards-topright 2s ease 3s backwards;
 }
 
 @keyframes towards-topright {
-    0% { transform: translate(-50%, -50%) scale(1); }
-    100% { transform: translate(50vw, -50vh) scale(0.14); }
+    from { transform: translate(-50%, -50%) scale(1); }
+    to { transform: translate(50vw, -50vh) scale(0.14); }
 }
 
 .partner-cert {
@@ -60,8 +60,7 @@ body {
     left: 10vw;
     width: 10vw;
     opacity: 0;
-    animation: slideInTop 500ms ease-out 5s;
-    animation-fill-mode: both;
+    animation: slideInTop 500ms ease-out 5s backwards;
 }
 
 /* Container for content */
@@ -198,17 +197,16 @@ h1, h2, h3, h4, h5, p , ul {
 /* Apply animations */
 .provider-features {
     animation: slideInLeft 700ms ease-out 4s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
 }
 
 .product-specs {
     animation: slideInRight 700ms ease-out 4s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
 }
 
 .middle-product-image {
-    animation: slideInBottom 700ms ease-out forwards, hoverFloat 4s infinite ease-in-out 1s;
-    /* animation-fill-mode: both; */
+    animation: slideInBottom 700ms ease-out backwards, hoverFloat 4s infinite ease-in-out 1s;
 }
 
 /* Additional styles for missing classes */
