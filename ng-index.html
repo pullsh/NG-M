@@ -110,13 +110,6 @@
                 });
             })
             .catch(error => console.error('Error loading JSON data:', error));
-
-        document.getElementById('logoAnimation').addEventListener('complete', () => {
-            document.getElementById('partnerCert').style.animation = 'slideInTop 500ms ease forwards';
-            document.querySelector('.provider-features').style.animation = 'slideInLeft 700ms ease-out forwards';
-            document.querySelector('.product-specs').style.animation = 'slideInRight 700ms ease-out forwards';
-            document.querySelector('.middle-product-image').style.animation = 'slideInBottom 700ms ease-out forwards, hoverFloat 4s infinite ease-in-out 1s';
-        });
     </script>
 </body>
 </html>

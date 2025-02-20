@@ -197,12 +197,12 @@ h1, h2, h3, h4, h5, p , ul {
 
 /* Apply animations */
 .provider-features {
-    animation: slideInLeft 700ms ease-out;
+    animation: slideInLeft 700ms ease-out 4s;
     animation-fill-mode: forwards;
 }
 
 .product-specs {
-    animation: slideInRight 700ms ease-out;
+    animation: slideInRight 700ms ease-out 4s;
     animation-fill-mode: forwards;
 }
 
