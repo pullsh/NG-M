@@ -38,8 +38,8 @@ body {
 
 .logo-header {
     display: flex;
+    position: absolute;
     align-items: center;
-    justify-content: center;
     width: 100vw;
     height: 100vh;
     z-index: 2;
@@ -57,7 +57,7 @@ body {
 }
 
 .partner-cert {
-    height: 12vh;
+    height: 10vh;
     animation: slideInTop 500ms ease-out 5s;
 }
 
