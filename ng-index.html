@@ -11,6 +11,12 @@
     <video class="background-video" autoplay loop muted>
         <source src="videos/Bildschirm2_Full_1440p.mp4" type="video/mp4">
     </video>
+    <div class="logo-header">
+        <img id="partnerCert" class="partner-cert" src="" alt="Partner Certification">
+        <dotlottie-player class="logo-animation" src="https://lottie.host/308cd2b6-38c1-4846-822e-58d2292b408c/RjIpRVuSKy.lottie" 
+            background="transparent" speed="0.5" style="width: 100%; height: 100%" direction="1" playMode="forward" autoplay>
+        </dotlottie-player>
+    </div>
     <div class="container">
         <div class="provider-features">
             <img id="providerLogo" class="provider-logo" src="" alt="Provider Logo">
@@ -33,12 +39,9 @@
             <img id="productImage" class="product-image" src="" alt="Product Image">
         </div>
         <div class="product-specs">
-            <dotlottie-player src="https://lottie.host/308cd2b6-38c1-4846-822e-58d2292b408c/RjIpRVuSKy.lottie" 
-            background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" playMode="forward" autoplay>
-            </dotlottie-player>
             <img id="productSpecsLine" class="product-specs-line" src="" alt="Product Specs Line">
             <div class="product-specs-right">
-                <h4 id="contractName" class="contract-name">"Vertrag"</h4>
+                <h4 id="contractName" class="contract-name">Vertrag</h4>
                 <img id="featureDataLimit" class="feature-data-limit" src="" alt="Data Limit">
                 <ul id="providerSpecsList" class="provider-specs-list">
                     <li>Spec 1</li>
@@ -77,6 +80,7 @@
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
+                document.getElementById('partnerCert').src = data.partnerCert;
                 document.getElementById('providerLogo').src = data.providerLogo;
                 document.getElementById('featureDataLimit').src = data.featureDataLimit;
                 document.getElementById('featurePriceBig1').textContent = data.featurePriceBig1;

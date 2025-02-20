@@ -36,6 +36,31 @@ body {
     z-index: -1;
 }
 
+.logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.logo-animation {
+    animation: towards-topright 4s;
+    animation-delay: 500ms;
+    animation-timing-function: ease;
+}
+
+@keyframes towards-topright {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(-100vh) translateX(100vw); }
+}
+
+.partner-cert {
+    height: 12vh;
+    animation: slideInTop 500ms ease-out 5s;
+}
+
 /* Container for content */
 .container {
     display: flex;
@@ -56,13 +81,9 @@ body {
 
 .provider-logo {
     display: flex;
-    border: 0.5vw solid white;
+    border: 0.6vw solid white;
     height: 26vh;
-    padding-block-end: 4vh;
-}
-
-.partner-cert {
-    height: 12vh;
+    margin-block-end: 4vh;
 }
 
 /* Feature Price Big */
@@ -158,6 +179,11 @@ h1, h2, h3, h4, h5, p , ul {
     to { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes slideInTop {
+    from { transform: translateY(-100%); opacity: 1; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 @keyframes hoverFloat {
     0% { transform: translateY(0); }
     50% { transform: translateY(-6%); }
@@ -166,15 +192,15 @@ h1, h2, h3, h4, h5, p , ul {
 
 /* Apply animations */
 .provider-features {
-    animation: slideInLeft 1s ease-out;
+    animation: slideInLeft 1s ease-out 5s;
 }
 
 .product-specs {
-    animation: slideInRight 1s ease-out;
+    animation: slideInRight 1s ease-out 5s;
 }
 
 .middle-product-image {
-    animation: slideInBottom 1s ease-out, hoverFloat 4s infinite ease-in-out 1s;
+    animation: slideInBottom 1s ease-out 5s, hoverFloat 4s infinite ease-in-out 1s;
 }
 
 /* Additional styles for missing classes */
