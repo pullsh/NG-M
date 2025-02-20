@@ -231,12 +231,16 @@ h1, h2, h3, h4, h5, p , ul {
     /*border: 0.1vw solid white;*/
     width: min-content;
     padding: 0.3vw;
-    font-size: 0.8vw;
+    font-size: 1.2vw;
     font-family: 'Open Sans Semibold';
     text-transform: uppercase;
     letter-spacing: 0.15vw;
     line-height: 2vh;
     text-align: center;
+}
+
+.feature-monthly {
+    font-size: 6vw;
 }
 
 .feature-price-small {
