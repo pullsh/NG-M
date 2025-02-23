@@ -55,9 +55,10 @@ body {
 }
 
 .partner-cert {
-    top: 10vh;
-    left: 10vw;
-    width: 10vw;
+    position: relative;
+    bottom: 40vh;
+    left: 31vw;
+    width: 8vw;
     animation: slideInTop 500ms ease-out 5s backwards;
 }
 
