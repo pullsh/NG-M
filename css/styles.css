@@ -50,8 +50,8 @@ body {
 }
 
 @keyframes towards-topright {
-    from { transform: translate(-50%, -50%) scale(1); }
-    to { transform: translate(40vw, -40vh) scale(0.14); }
+    from { transform: translate(-50%, 0%) scale(1); }
+    to { transform: translate(-40%, -40%) scale(0.3); }
 }
 
 .partner-cert {
@@ -177,13 +177,14 @@ h1, h2, h3, h4, h5, p , ul {
 }
 
 @keyframes slideInBottom {
-    from { transform: translateY(150%); opacity: 1; }
+    from { transform: translateY(200%); opacity: 1; }
     80% { transform: translateY(-5%); }
     to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes slideInTop {
     from { transform: translateY(-150%); opacity: 1; }
+    80% { transform: translateY(5%); }
     to { transform: translateY(0); opacity: 1; }
 }
 
