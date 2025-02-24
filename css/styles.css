@@ -40,18 +40,17 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 2;
 }
 
 .logo-animation {
-    position: absolute;
+    position: relative;
     animation: towards-topright 2s ease 3s backwards;
 }
 
 @keyframes towards-topright {
-    from { transform: translate(-50%, 0%) scale(1); }
-    to { transform: translate(-40%, -40%) scale(0.3); }
+    from { transform: translate(-50%, -40%) scale(1); }
+    to { transform: translate(35%, -95%) scale(0.15); }
 }
 
 .partner-cert {
