@@ -45,18 +45,18 @@ body {
 
 .logo-animation {
     position: relative;
-    animation: towards-topright 2s ease 3s backwards;
+    animation: towards-topright 2s ease 3s both;
 }
 
 @keyframes towards-topright {
     from { transform: translate(-50%, -40%) scale(1); }
-    to { transform: translate(35%, -95%) scale(0.15); }
+    to { transform: translate(35%, -93%) scale(0.18); }
 }
 
 .partner-cert {
     position: relative;
-    bottom: 40vh;
-    left: 31vw;
+    bottom: 133vh;
+    left: 27vw;
     width: 8vw;
     animation: slideInTop 500ms ease-out 5s backwards;
 }
