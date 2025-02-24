@@ -41,6 +41,7 @@ body {
     top: 50%;
     left: 50%;
     z-index: 2;
+    filter: drop-shadow(3% 3% 5% rgba(0, 0, 0, 0.5));
 }
 
 .logo-animation {
@@ -50,7 +51,7 @@ body {
 
 @keyframes towards-topright {
     from { transform: translate(-50%, -40%) scale(1); }
-    to { transform: translate(35%, -93%) scale(0.18); }
+    to { transform: translate(35%, -92.5%) scale(0.18); }
 }
 
 .partner-cert {
@@ -164,13 +165,13 @@ h1, h2, h3, h4, h5, p , ul {
 
 /* Animations */
 @keyframes slideInLeft {
-    from { transform: translateX(-150%); opacity: 1; }
+    from { transform: translateX(-200%); opacity: 1; }
     80% { transform: translateX(5%); }
     to { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInRight {
-    from { transform: translateX(150%); opacity: 1; }
+    from { transform: translateX(200%); opacity: 1; }
     80% { transform: translateX(-5%); }
     to { transform: translateX(0); opacity: 1; }
 }
@@ -182,8 +183,8 @@ h1, h2, h3, h4, h5, p , ul {
 }
 
 @keyframes slideInTop {
-    from { transform: translateY(-150%); opacity: 1; }
-    80% { transform: translateY(5%); }
+    from { transform: translateY(-200%); opacity: 1; }
+    80% { transform: translateY(15%); }
     to { transform: translateY(0); opacity: 1; }
 }
 
