@@ -50,12 +50,12 @@ body {
 
 @keyframes towards-topright {
     from { transform: translate(-50%, -40%) scale(1); }
-    to { transform: translate(35%, -92.5%) scale(0.18); }
+    to { transform: translate(33%, -91%) scale(0.2); }
 }
 
 .partner-cert {
-    position: relative;
-    bottom: 133vh;
+    position: absolute;
+    bottom: 138%;
     left: 27vw;
     width: 8vw;
     animation: slideInTop 500ms ease-out 5s backwards;
@@ -237,7 +237,7 @@ h1, h2, h3, h4, h5, p , ul {
     padding: 0.3vw;
     font-size: 1.2vw;
     font-family: 'Open Sans Semibold';
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 0.15vw;
     line-height: 2vh;
     text-align: right;
