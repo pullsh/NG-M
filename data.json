@@ -1,7 +1,5 @@
 {
-    "partnerCert": "images/partner-cert.svg",
     "providerLogo": "images/logos/1und1_logo.svg",
-    "featureDataLimit": "images/feature-data-limit.svg",
     "featurePriceBig1": "39,",
     "featurePriceBig2": "99€",
     "featureMonthly": "mtl.",
@@ -9,8 +7,8 @@
     "featureOnetime": "Zuzahlung",
     "featureAnnotation": "Bei 36 Monaten Vertragstreue, ansonsten 320,-€ Zahlung bei Vertragsende (jederzeit nach 24 Monaten)",
     "productImage": "images/product.webp",
-    "productSpecsLine": "images/product-specs-line.svg",
     "productName": "iPhone 16",
+    "featureDataLimit": "images/feature-data-limit.svg",
     "productSpecsList": [
         "Ab 128Gb",
         "Apple A18 Pro Chip",

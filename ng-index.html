@@ -15,7 +15,7 @@
         <dotlottie-player id="logoAnimation" class="logo-animation" src="images/NG_Mobil_Logo_BildWort_inverted_Motiongraphic.lottie" 
             background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" playMode="forwards" autoplay>
         </dotlottie-player>
-        <img id="partnerCert" class="partner-cert" src="" alt="Partner Certification">
+        <img id="partnerCert" class="partner-cert" src="images/partner-cert.svg" alt="Partner Certification">
     </div>
     <div class="container">
         <div class="provider-features">
@@ -39,7 +39,7 @@
             <img id="productImage" class="product-image" src="" alt="Product Image">
         </div>
         <div class="product-specs">
-            <img id="productSpecsLine" class="product-specs-line" src="" alt="Product Specs Line">
+            <img id="productSpecsLine" class="product-specs-line" src="images/product-specs-line.svg" alt="Product Specs Line">
             <div class="product-specs-right">
                 <h4 id="contractName" class="contract-name">Vertrag</h4>
                 <img id="featureDataLimit" class="feature-data-limit" src="" alt="Data Limit">
@@ -80,9 +80,7 @@
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('partnerCert').src = data.partnerCert;
                 document.getElementById('providerLogo').src = data.providerLogo;
-                document.getElementById('featureDataLimit').src = data.featureDataLimit;
                 document.getElementById('featurePriceBig1').textContent = data.featurePriceBig1;
                 document.getElementById('featurePriceBig2').textContent = data.featurePriceBig2;
                 document.getElementById('featureMonthly').textContent = data.featureMonthly;
@@ -90,8 +88,8 @@
                 document.getElementById('featureOnetime').textContent = data.featureOnetime;
                 document.getElementById('featureAnnotation').textContent = data.featureAnnotation;
                 document.getElementById('productImage').src = data.productImage;
-                document.getElementById('productSpecsLine').src = data.productSpecsLine;
                 document.getElementById('productName').textContent = data.productName;
+                document.getElementById('featureDataLimit').src = data.featureDataLimit;
 
                 const specsList = document.getElementById('productSpecsList');
                 specsList.innerHTML = ''; // Clear existing content
