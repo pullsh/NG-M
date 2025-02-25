@@ -58,7 +58,7 @@ body {
     bottom: 138%;
     left: 27vw;
     width: 8vw;
-    animation: slideInTop 500ms ease-out 5s backwards;
+    animation: slideInTop 500ms ease-out 4s backwards;
 }
 
 /* Container for content */
