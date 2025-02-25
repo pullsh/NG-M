@@ -21,6 +21,9 @@
             <select id="providerLogo" class="provider-logo">
                 <option value="images/logos/1und1_logo.svg">1&1</option>
                 <option value="images/logos/Telekom_logo.svg">Telekom</option>
+                <option value="images/logos/Vodafone_logo.svg">Vodafone</option>
+                <option value="images/logos/CONGSTAR_weiss.svg">Congstar</option>
+                <option value="images/logos/OTELO_schwarz.svg">Otelo</option>
                 <!-- Add more options as needed -->
             </select>
             <div class="feature-price-big-columns">
@@ -40,9 +43,13 @@
         </div>
         <div class="middle-product-image">
             <input type="file" id="productImage" class="product-image" accept="image/*">
+            <div class="download-section">
+                <input type="text" id="fileName" placeholder="File Name">
+                <button onclick="downloadFiles()">Download Files</button>
+            </div>
         </div>
         <div class="product-specs">
-            <img id="productSpecsLine" class="product-specs-line" src="" alt="Product Specs Line">
+            <img id="productSpecsLine" class="product-specs-line" src="images/product-specs-line.svg" alt="Product Specs Line">
             <div class="product-specs-right">
                 <h4 id="contractName" class="contract-name">Vertrag</h4>
                 <input type="checkbox" id="featureDataLimitCheckbox"> Enable Feature Data Limit
@@ -52,10 +59,6 @@
                 <textarea id="productSpecsList" class="product-specs-list" placeholder="Product Specs List (comma separated)"></textarea>
             </div>
         </div>
-    </div>
-    <div class="download-section">
-        <input type="text" id="fileName" placeholder="File Name">
-        <button onclick="downloadFiles()">Download Files</button>
     </div>
 
     <script>
