@@ -1,9 +1,28 @@
 /* General Styles */
+@font-face {
+    font-family: 'Open Sans CondBold';
+    src: url('../Open Sans/OpenSans-CondBold.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans CondLightitalic';
+    src: url('../Open Sans/OpenSans-CondLightitalic.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans CondLight';
+    src: url('../Open Sans/OpenSans-CondLight.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans Semibold';
+    src: url('../Open Sans/OpenSans-Semibold.ttf');
+}
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     overflow: hidden;
-    background-color: #f0f0f0;
 }
 
 .background-video {
@@ -90,6 +109,10 @@ body {
     position: relative;
 }
 
+.product-image {
+    width: auto;
+}
+
 .product-specs {
     width: 25%;
     height: 85%;
@@ -118,11 +141,28 @@ img {
     height: auto;
 }
 
+img , .logo-animation {
+    filter: drop-shadow(-0.1vw 0.5vw 0.5vw rgba(0, 0, 0, 0.5))
+}
+
+/* Text styles */
+h1, h2, h3, h4, h5, p , ul {
+    margin: 5px 0;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 input, select, textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
     font-size: 1rem;
+    background-color: transparent;
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+    color: white;
+    opacity: 0.5;
 }
 
 .download-section {
