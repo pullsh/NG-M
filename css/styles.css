@@ -137,8 +137,8 @@ body {
     position: relative;
 }
 
-.product-image img {
-    min-width: 25vw;
+.product-image {
+    min-width: 90%;
 }
 
 /* Product Specs */
