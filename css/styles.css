@@ -81,8 +81,9 @@ body {
 
 .provider-logo {
     display: flex;
-    border: 0.6vw solid white;
-    height: 26vh;
+    background-color: white;
+    border: 1.3vw solid white;
+    height: 25vh;
     margin-block-end: 4vh;
 }
 

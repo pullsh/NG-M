@@ -9,7 +9,7 @@
 </head>
 <body>
     <video class="background-video" autoplay loop muted>
-        <source src="videos/Bildschirm2_Full_1440p.mp4" type="video/mp4">
+        <source src="videos/NextGen_Mobil_BG_4s_loop.mp4" type="video/mp4">
     </video>
     <div class="logo-header">
         <dotlottie-player id="logoAnimation" class="logo-animation" src="images/NG_Mobil_Logo_BildWort_inverted_Motiongraphic.lottie" 
@@ -74,7 +74,6 @@
                 featureOnetime: document.getElementById('featureOnetime').value,
                 featureAnnotation: document.getElementById('featureAnnotation').value,
                 productImage: document.getElementById('productImage').files[0] ? URL.createObjectURL(document.getElementById('productImage').files[0]) : '',
-                productSpecsLine: document.getElementById('productSpecsLine').src,
                 productName: document.getElementById('productName').textContent,
                 productSpecsList: document.getElementById('productSpecsList').value.split(',').map(item => item.trim()),
                 providerSpecsList: document.getElementById('providerSpecsList').value.split(',').map(item => item.trim())
@@ -96,13 +95,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Gen Slide 1</title>
+    <title>${data.fileName}</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"><\/script>
 </head>
 <body>
     <video class="background-video" autoplay loop muted>
-        <source src="videos/Bildschirm2_Full_1440p.mp4" type="video/mp4">
+        <source src="videos/NextGen_Mobil_BG_4s_loop.mp4" type="video/mp4">
     </video>
     <div class="logo-header">
         <dotlottie-player id="logoAnimation" class="logo-animation" src="images/NG_Mobil_Logo_BildWort_inverted_Motiongraphic.lottie" 
