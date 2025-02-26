@@ -40,7 +40,6 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 2;
 }
 
 .logo-animation {
@@ -58,7 +57,7 @@ body {
     bottom: 138%;
     left: 27vw;
     width: 8vw;
-    animation: slideInTop 500ms ease-out 4s backwards;
+    animation: slideInTop 700ms ease-out 4500ms backwards;
 }
 
 /* Container for content */
@@ -230,6 +229,7 @@ h1, h2, h3, h4, h5, p , ul {
     line-height: 16vh;
     font-family: 'Open Sans CondBold';
     text-align: left;
+    transform: translateY(-1vh);
 }
 
 .feature-monthly , .feature-onetime {
