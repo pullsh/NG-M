@@ -46,7 +46,7 @@
             <input type="file" id="productImage" class="product-image" accept="image/*">
             <div class="download-section">
                 <input type="text" id="fileName" placeholder="File Name">
-                <button onclick="downloadFiles()">Dateien speichern (HTML und JSON)</button>
+                <button onclick="downloadHTML()">Datei speichern (HTML)</button>
             </div>
         </div>
         <div class="product-specs">
@@ -63,7 +63,7 @@
     </div>
 
     <script>
-        function downloadFiles() {
+        function downloadHTML() {
             const data = {
                 providerLogo: document.getElementById('providerLogo').value,
                 featureDataLimit: document.getElementById('featureDataLimitCheckbox').checked ? document.getElementById('featureDataLimit').value : '',
@@ -79,15 +79,7 @@
                 providerSpecsList: document.getElementById('providerSpecsList').value.split(',').map(item => item.trim())
             };
 
-            const jsonContent = JSON.stringify(data, null, 4);
             const fileName = document.getElementById('fileName').value || 'data';
-
-            const jsonBlob = new Blob([jsonContent], { type: 'application/json' });
-            const jsonUrl = URL.createObjectURL(jsonBlob);
-            const jsonLink = document.createElement('a');
-            jsonLink.href = jsonUrl;
-            jsonLink.download = `${fileName}.json`;
-            jsonLink.click();
 
             const htmlContent = `
 <!DOCTYPE html>
@@ -95,7 +87,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${data.fileName}</title>
+    <title>${fileName}</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"><\/script>
 </head>
