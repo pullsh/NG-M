@@ -33,6 +33,7 @@ body {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
+    filter: brightness(0.7) contrast(1.2);
 }
 
 .logo-header {
