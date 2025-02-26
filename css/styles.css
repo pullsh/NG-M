@@ -124,7 +124,7 @@ body {
 .feature-price-small-columns {
     display: flex;
     align-items: center;
-    gap: 3vw;
+    gap: 2vw;
 }
 
 /* Product Image */
@@ -138,7 +138,7 @@ body {
 }
 
 .product-image img {
-    max-width: 90%;
+    min-width: 25vw;
 }
 
 /* Product Specs */
