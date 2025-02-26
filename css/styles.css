@@ -73,7 +73,7 @@ body {
     bottom: 138%;
     left: 27vw;
     width: 8vw;
-    animation: slideInTop 700ms ease-out 4500ms backwards;
+    animation: slideInTop 700ms ease-out 4s backwards;
 }
 
 /* Container for content */
