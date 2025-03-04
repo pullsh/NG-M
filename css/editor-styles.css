@@ -70,12 +70,22 @@ body {
     align-items: flex-end;
 }
 
-.provider-logo {
+.provider-logo-container {
     display: flex;
-    background-color: white;
+    align-items: center;
+    gap: 10px;
+}
+
+.provider-logo-select {
+    width: auto;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.provider-logo-preview {
+    width: 25vh;
+    height: auto;
     border: 1.3vw solid white;
-    height: 25vh;
-    margin-block-end: 4vh;
 }
 
 .feature-price-big-columns {
@@ -110,8 +120,10 @@ body {
     position: relative;
 }
 
-.product-image {
+.product-image-preview {
     width: auto;
+    max-width: 90%;
+    margin-top: 10px;
 }
 
 .product-specs {
@@ -159,6 +171,8 @@ input, select, textarea {
     margin: 5px 0;
     font-size: 1rem;
     background-color: transparent;
+    color: white;
+    border: none;
 }
 
 input::placeholder, select::placeholder, textarea::placeholder {
