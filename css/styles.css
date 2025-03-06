@@ -66,12 +66,12 @@ body {
 
 @keyframes towards-topright {
     from { transform: translate(-50%, -40%) scale(1); }
-    to { transform: translate(0%, -61%) scale(0.2); }
+    to { transform: translate(70%, -105%) scale(0.25); }
 }
 
 .partner-cert {
     position: absolute;
-    bottom: 138%;
+    bottom: 150%;
     left: 27vw;
     width: 8vw;
     animation: slideInTop 700ms ease-out 4s backwards;
