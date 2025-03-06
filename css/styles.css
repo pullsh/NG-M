@@ -60,12 +60,13 @@ body {
 
 .logo-animation {
     position: relative;
+    width: 70%;
     animation: towards-topright 2s ease 3s both;
 }
 
 @keyframes towards-topright {
     from { transform: translate(-50%, -40%) scale(1); }
-    to { transform: translate(33%, -91%) scale(0.2); }
+    to { transform: translate(0%, -61%) scale(0.2); }
 }
 
 .partner-cert {
