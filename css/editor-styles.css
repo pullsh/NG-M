@@ -44,12 +44,13 @@ body {
 
 .logo-animation {
     position: relative;
-    transform: translate(33%, -91%) scale(0.2);
+    width: 70%;
+    transform: translate(70%, -105%) scale(0.25);
 }
 
 .partner-cert {
     position: absolute;
-    bottom: 138%;
+    bottom: 150%;
     left: 27vw;
     width: 8vw;
 }
