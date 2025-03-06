@@ -23,6 +23,7 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     overflow: hidden;
+    background-color: white;
 }
 
 /* Background Video */
@@ -34,7 +35,9 @@ body {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    background-blend-mode: screen;
+    mix-blend-mode: exclusion;
+    filter: hue-rotate(191deg);
+    opacity: 30%;
     /* filter: brightness(0.6) contrast(1.4) hue-rotate(20deg); */
 }
 
@@ -156,6 +159,7 @@ body {
 
 .product-specs-line {
     height: 72%;
+    filter: brightness(0.0);
 }
 
 .product-specs-right {
@@ -173,14 +177,14 @@ img {
 }
 
 img , .logo-animation {
-    filter: drop-shadow(-0.1vw 0.5vw 0.5vw rgba(0, 0, 0, 0.5))
+    /* filter: drop-shadow(-0.1vw 0.5vw 0.5vw rgba(0, 0, 0, 0.5)) */
 }
 
 /* Text styles */
 h1, h2, h3, h4, h5, p , ul {
     margin: 5px 0;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
 }
 
 /* Animations */
@@ -232,6 +236,7 @@ h1, h2, h3, h4, h5, p , ul {
 /* Additional styles for missing classes */
 .feature-data-limit {
     width: 80%;
+    filter: brightness(0.0);
 }
 
 .feature-price-big1 {
