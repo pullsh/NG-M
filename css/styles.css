@@ -71,7 +71,7 @@ body {
 
 .partner-cert {
     position: absolute;
-    bottom: 150%;
+    bottom: 138%;
     left: 27vw;
     width: 8vw;
     animation: slideInTop 700ms ease-out 4s backwards;
