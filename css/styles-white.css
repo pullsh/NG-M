@@ -64,6 +64,7 @@ body {
 
 .logo-animation {
     position: relative;
+    border: none;
     animation: towards-topright 2s ease 3s both;
 }
 
