@@ -66,7 +66,7 @@ body {
 
 @keyframes towards-topright {
     from { transform: translate(-50%, -40%) scale(1); }
-    to { transform: translate(70%, -105%) scale(0.25); }
+    to { transform: translate(33%, -91%) scale(0.2); }
 }
 
 .partner-cert {
