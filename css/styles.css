@@ -41,8 +41,9 @@ body {
     position: absolute;
     mix-blend-mode: plus-lighter;
     opacity: 40%;
-    width: 100%;
-    top: -50%;
+    width: 82%;
+    top: -30%;
+    left: 12%;
     rotate: 14deg;
     animation: fadeIn 1s ease 4s backwards;
 }
