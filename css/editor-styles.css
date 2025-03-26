@@ -231,7 +231,7 @@ input::placeholder, select::placeholder, textarea::placeholder {
 
 .feature-monthly , .feature-onetime {
     /*border: 0.1vw solid white;*/
-    width: min-content;
+    /* width: min-content; */
     padding: 0.3vw;
     font-size: 1.2vw;
     font-family: 'Open Sans Semibold';
