@@ -150,6 +150,12 @@ body {
     gap: 1vh;
 }
 
+.feature-data-limit-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -170,7 +176,7 @@ input, select, textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     background-color: transparent;
     color: white;
     border: none;
@@ -200,4 +206,61 @@ input::placeholder, select::placeholder, textarea::placeholder {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
+}
+
+/* Styles für Textfelder */
+
+.feature-price-big1 {
+    font-size: 13vw;
+    line-height: 1vh;
+    font-family: 'Open Sans CondBold';
+    text-align: right;
+}
+
+.feature-price-big2 {
+    font-size: 7vw;
+    line-height: 16vh;
+    font-family: 'Open Sans CondBold';
+    text-align: left;
+    transform: translateY(-1vh);
+}
+
+.feature-monthly , .feature-onetime {
+    /*border: 0.1vw solid white;*/
+    width: min-content;
+    padding: 0.3vw;
+    font-size: 1.2vw;
+    font-family: 'Open Sans Semibold';
+    /* text-transform: uppercase; */
+    letter-spacing: 0.15vw;
+    line-height: 2vh;
+    text-align: right;
+}
+
+.feature-monthly {
+    font-size: 2.5vw;
+}
+
+.feature-price-small {
+    font-size: 7vw;
+    font-family: 'Open Sans CondBold';
+    text-align: right;
+}
+
+.feature-annotation {
+    font-size: 1.5vw;
+    max-width: 85%;
+    font-family: 'Open Sans CondLight';
+    text-align: right;
+}
+
+.product-name , .contract-name {
+    font-size: 3vw;
+    font-family: 'Open Sans CondBold';
+}
+
+.product-specs-list , .provider-specs-list {
+    font-size: 1.5vw;
+    font-family: 'Open Sans CondLight';
+    list-style-type: disc;
 }
