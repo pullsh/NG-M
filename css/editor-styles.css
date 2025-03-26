@@ -84,9 +84,9 @@ body {
 }
 
 .provider-logo-preview {
-    width: 25vh;
-    height: auto;
+    height: 25vh;
     border: 1.3vw solid white;
+    background-color: white;
 }
 
 .feature-price-big-columns {
@@ -184,6 +184,10 @@ input, select, textarea {
     background-color: transparent;
     color: white;
     border: none;
+}
+
+option {
+    background-color: #000000;
 }
 
 input::placeholder, select::placeholder, textarea::placeholder {
