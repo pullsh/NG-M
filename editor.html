@@ -60,7 +60,6 @@
                     <img id="featureDataLimit" class="feature-data-limit" src="images/feature-data-limit.svg" alt="Data Limit">
                     <input type="checkbox" id="featureDataLimitCheckbox">
                 </div>
-                <input type="text" id="featureDataLimit" class="feature-data-limit" placeholder="Feature Data Limit URL">
                 <textarea id="providerSpecsList" class="provider-specs-list" placeholder="Provider Specs List (comma separated)"></textarea>
                 <input type="text" id="productName" class="product-name" placeholder="Produkt">
                 <textarea id="productSpecsList" class="product-specs-list" placeholder="Product Specs List (comma separated)"></textarea>
@@ -88,7 +87,6 @@
         function downloadHTML() {
             const data = {
                 providerLogo: document.getElementById('providerLogoSelect').value,
-                featureDataLimit: document.getElementById('featureDataLimitCheckbox').checked ? document.getElementById('featureDataLimit').value : '',
                 featurePriceBig1: document.getElementById('featurePriceBig1').value,
                 featurePriceBig2: document.getElementById('featurePriceBig2').value,
                 featureMonthly: document.getElementById('featureMonthly').value,
@@ -97,6 +95,7 @@
                 featureAnnotation: document.getElementById('featureAnnotation').value,
                 productImage: document.getElementById('productImage').files[0] ? `images/${document.getElementById('productImage').files[0].name}` : '',
                 contractName: document.getElementById('contractName').value,
+                featureDataLimit: document.getElementById('featureDataLimitCheckbox').checked ? document.getElementById('featureDataLimit').value : '',
                 providerSpecsList: document.getElementById('providerSpecsList').value.split(',').map(item => item.trim()),
                 productName: document.getElementById('productName').value,
                 productSpecsList: document.getElementById('productSpecsList').value.split(',').map(item => item.trim()),
