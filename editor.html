@@ -55,11 +55,11 @@
         <div class="product-specs">
             <img id="productSpecsLine" class="product-specs-line" src="images/product-specs-line.svg" alt="Product Specs Line">
             <div class="product-specs-right">
-                <h4 id="contractName" class="contract-name">Vertrag</h4>
+                <input type="text" id="contractName" class="contract-name" placeholder="Vertrag">
                 <input type="checkbox" id="featureDataLimitCheckbox"> Enable Feature Data Limit
                 <input type="text" id="featureDataLimit" class="feature-data-limit" placeholder="Feature Data Limit URL">
                 <textarea id="providerSpecsList" class="provider-specs-list" placeholder="Provider Specs List (comma separated)"></textarea>
-                <h4 id="productName" class="product-name">Product Name</h4>
+                <input type="text" id="productName" class="product-name" placeholder="Produkt">
                 <textarea id="productSpecsList" class="product-specs-list" placeholder="Product Specs List (comma separated)"></textarea>
             </div>
         </div>
@@ -93,9 +93,10 @@
                 featureOnetime: document.getElementById('featureOnetime').value,
                 featureAnnotation: document.getElementById('featureAnnotation').value,
                 productImage: document.getElementById('productImage').files[0] ? `images/${document.getElementById('productImage').files[0].name}` : '',
-                productName: document.getElementById('productName').textContent,
+                contractName: document.getElementById('contractName').value,
+                providerSpecsList: document.getElementById('providerSpecsList').value.split(',').map(item => item.trim()),
+                productName: document.getElementById('productName').value,
                 productSpecsList: document.getElementById('productSpecsList').value.split(',').map(item => item.trim()),
-                providerSpecsList: document.getElementById('providerSpecsList').value.split(',').map(item => item.trim())
             };
 
             const fileName = document.getElementById('fileName').value || 'data';
@@ -143,7 +144,7 @@
         <div class="product-specs">
             <img id="productSpecsLine" class="product-specs-line" src="images/product-specs-line.svg" alt="Product Specs Line">
             <div class="product-specs-right">
-                <h4 id="contractName" class="contract-name">Vertrag</h4>
+                <h4 id="contractName" class="contract-name">${data.contractName}</h4>
                 ${data.featureDataLimit ? `<img id="featureDataLimit" class="feature-data-limit" src="${data.featureDataLimit}" alt="Data Limit">` : ''}
                 <ul id="providerSpecsList" class="provider-specs-list">
                     ${data.providerSpecsList.map(spec => `<li>${spec}</li>`).join('')}
