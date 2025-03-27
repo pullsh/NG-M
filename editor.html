@@ -25,7 +25,6 @@
                     <option value="images/logos/Vodafone_logo.svg">Vodafone</option>
                     <option value="images/logos/CONGSTAR_logo.svg">Congstar</option>
                     <option value="images/logos/OTELO_schwarz.svg">Otelo</option>
-                    <!-- Add more options as needed -->
                 </select>
                 <img id="providerLogoPreview" class="provider-logo-preview" src="images/logos/1und1_logo.svg" alt="Provider Logo Preview">
             </div>
@@ -63,7 +62,7 @@
                 <input type="text" id="contractName" class="contract-name" placeholder="Vertrag">
                 <div class="feature-data-limit-container">
                     <img id="featureDataLimit" class="feature-data-limit" src="images/feature-data-limit.svg" alt="Data Limit">
-                    <input type="checkbox" id="featureDataLimitCheckbox">
+                    <input type="checkbox" id="featureDataLimitCheckbox" checked>
                 </div>
                 <textarea id="providerSpecsList" class="provider-specs-list" placeholder="Vertragsdetails (kommagetrennt)"></textarea>
                 <input type="text" id="productName" class="product-name" placeholder="Produkt">
@@ -107,7 +106,7 @@
                 productImage: document.getElementById('productImage').files[0] ? `images/${document.getElementById('productImage').files[0].name}` : '',
                 productImageWidth: document.getElementById('imageWidthSlider').value,
                 contractName: document.getElementById('contractName').value,
-                featureDataLimit: document.getElementById('featureDataLimitCheckbox').checked ? document.getElementById('featureDataLimit').value : '',
+                featureDataLimitEnabled: document.getElementById('featureDataLimitCheckbox').checked,
                 providerSpecsList: document.getElementById('providerSpecsList').value.split(',').map(item => item.trim()),
                 productName: document.getElementById('productName').value,
                 productSpecsList: document.getElementById('productSpecsList').value.split(',').map(item => item.trim()),
@@ -129,6 +128,7 @@
     <video class="background-video" autoplay loop muted>
         <source src="videos/NextGen_Mobil_BG_4s_loop.webm" type="video/webm">
     </video>
+    <img class="spotlight" src="images/spotlight.png" alt="spotlight">
     <div class="logo-header">
         <dotlottie-player id="logoAnimation" class="logo-animation" src="images/next gen mobil motion_inverted.lottie" 
             background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" playMode="forwards" autoplay>
@@ -160,7 +160,7 @@
             <img id="productSpecsLine" class="product-specs-line" src="images/product-specs-line.svg" alt="Product Specs Line">
             <div class="product-specs-right">
                 <h4 id="contractName" class="contract-name">${data.contractName}</h4>
-                ${data.featureDataLimit ? `<img id="featureDataLimit" class="feature-data-limit" src="${data.featureDataLimit}" alt="Data Limit">` : ''}
+                ${data.featureDataLimitEnabled ? `<img id="featureDataLimit" class="feature-data-limit" src="images/feature-data-limit.svg" alt="Data Limit">` : ''}
                 <ul id="providerSpecsList" class="provider-specs-list">
                     ${data.providerSpecsList.map(spec => `<li>${spec}</li>`).join('')}
                 </ul>
