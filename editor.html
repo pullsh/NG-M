@@ -90,7 +90,8 @@
         }
 
         function updateImageWidth(value) {
-            document.getElementById('productImagePreview').style.minWidth = `${value}%`;
+            const preview = document.getElementById('productImagePreview');
+            preview.style.minWidth = `${value}%`;
             document.getElementById('imageWidthValue').textContent = `${value}%`;
         }
 
