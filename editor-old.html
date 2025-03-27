@@ -45,15 +45,10 @@
             <textarea id="featureAnnotation" class="feature-annotation" placeholder="Fußnote"></textarea>
         </div>
         <div class="middle-product-image">
-            <input type="file" id="productImage" class="product-image" accept="image/*" onchange="previewProductImage()" style="width: auto;">
-            <img id="productImagePreview" class="product-image-preview" src="" alt="Produktbild Vorschau" style="min-width: 100%;">
-            <div class="slider-container">
-                <label for="imageWidthSlider">Bildbreite:</label>
-                <input type="range" id="imageWidthSlider" min="50" max="150" value="100" oninput="updateImageWidth(this.value)">
-                <span id="imageWidthValue">100%</span>
-            </div>
+            <input type="file" id="productImage" class="product-image" accept="image/*" onchange="previewProductImage()">
+            <img id="productImagePreview" class="product-image-preview" src="" alt="Product Image Preview">
             <div class="download-section">
-                <input type="text" id="fileName" placeholder="Dateiname">
+                <input type="text" id="fileName" placeholder="File Name">
                 <button onclick="downloadHTML()">Datei speichern (HTML)</button>
             </div>
         </div>
@@ -65,9 +60,9 @@
                     <img id="featureDataLimit" class="feature-data-limit" src="images/feature-data-limit.svg" alt="Data Limit">
                     <input type="checkbox" id="featureDataLimitCheckbox">
                 </div>
-                <textarea id="providerSpecsList" class="provider-specs-list" placeholder="Vertragsdetails (kommagetrennt)"></textarea>
+                <textarea id="providerSpecsList" class="provider-specs-list" placeholder="Provider Specs List (comma separated)"></textarea>
                 <input type="text" id="productName" class="product-name" placeholder="Produkt">
-                <textarea id="productSpecsList" class="product-specs-list" placeholder="Produktdetails (kommagetrennt)"></textarea>
+                <textarea id="productSpecsList" class="product-specs-list" placeholder="Product Specs List (comma separated)"></textarea>
             </div>
         </div>
     </div>
@@ -89,12 +84,6 @@
             }
         }
 
-        function updateImageWidth(value) {
-            const preview = document.getElementById('productImagePreview');
-            preview.style.minWidth = `${value}%`;
-            document.getElementById('imageWidthValue').textContent = `${value}%`;
-        }
-
         function downloadHTML() {
             const data = {
                 providerLogo: document.getElementById('providerLogoSelect').value,
@@ -105,7 +94,6 @@
                 featureOnetime: document.getElementById('featureOnetime').value,
                 featureAnnotation: document.getElementById('featureAnnotation').value,
                 productImage: document.getElementById('productImage').files[0] ? `images/${document.getElementById('productImage').files[0].name}` : '',
-                productImageWidth: document.getElementById('imageWidthSlider').value,
                 contractName: document.getElementById('contractName').value,
                 featureDataLimit: document.getElementById('featureDataLimitCheckbox').checked ? document.getElementById('featureDataLimit').value : '',
                 providerSpecsList: document.getElementById('providerSpecsList').value.split(',').map(item => item.trim()),
@@ -123,16 +111,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${fileName}</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"><\/script>
 </head>
 <body>
     <video class="background-video" autoplay loop muted>
         <source src="videos/NextGen_Mobil_BG_4s_loop.webm" type="video/webm">
     </video>
     <div class="logo-header">
-        <dotlottie-player id="logoAnimation" class="logo-animation" src="images/next gen mobil motion_inverted.lottie" 
-            background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" playMode="forwards" autoplay>
-        </dotlottie-player>
+        <video class="logo-animation" autoplay muted>
+            <source src="videos/NG_Mobil_Logo_BildWort_inverted_Motiongraphic.webm" type="video/webm">
+        </video>
         <img id="partnerCert" class="partner-cert" src="images/partner-cert.svg" alt="Partner Certification">
     </div>
     <div class="container">
@@ -154,7 +141,7 @@
             <p id="featureAnnotation" class="feature-annotation">${data.featureAnnotation}</p>
         </div>
         <div class="middle-product-image">
-            <img id="productImage" class="product-image" src="${data.productImage}" alt="Product Image" style="min-width: ${data.productImageWidth}%; max-width: 100%;">
+            <img id="productImage" class="product-image" src="${data.productImage}" alt="Product Image">
         </div>
         <div class="product-specs">
             <img id="productSpecsLine" class="product-specs-line" src="images/product-specs-line.svg" alt="Product Specs Line">
