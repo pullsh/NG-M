@@ -288,3 +288,97 @@ h1, h2, h3, h4, h5, p , ul {
     font-family: 'Open Sans CondLight';
     list-style-type: disc;
 }
+
+/* styles für editor */
+.provider-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.provider-logo-select {
+    width: auto;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.provider-logo-preview {
+    height: 25vh;
+    border: 1.3vw solid white;
+    background-color: white;
+}
+
+.product-image-preview {
+    width: auto;
+    max-width: 90%;
+    margin-top: 10px;
+}
+
+.feature-data-limit-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.background-controls {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* width: 25vw; */
+    display: flex;
+    gap: 2vw;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input, select, textarea, label, span {
+    width: 100%;
+    /* padding: 10px; */
+    margin: 5px 0;
+    /* font-size: 1rem; */
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+option {
+    background-color: #000000;
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.download-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.download-section input {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.download-section button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.feature-monthly-editor , .feature-onetime-editor {
+    /*border: 0.1vw solid white;*/
+    width: 50%;
+    /* padding: 0.3vw; */
+    font-size: 1.2vw;
+    font-family: 'Open Sans Semibold';
+    /* text-transform: uppercase; */
+    letter-spacing: 0.15vw;
+    line-height: 2vh;
+    text-align: right;
+}

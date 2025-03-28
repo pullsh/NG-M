@@ -36,6 +36,22 @@ body {
     filter: brightness(0.6) contrast(1.4) hue-rotate(20deg);
 }
 
+.spotlight {
+    position: absolute;
+    mix-blend-mode: plus-lighter;
+    opacity: 40%;
+    width: 87%;
+    top: -22%;
+    left: 8%;
+    rotate: 14deg;
+    animation: fadeIn 1s ease 4s backwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 40%; }
+}
+
 .logo-header {
     position: absolute;
     top: 50%;
@@ -231,7 +247,7 @@ input::placeholder, select::placeholder, textarea::placeholder {
 
 .feature-price-big1 {
     font-size: 13vw;
-    line-height: 1vh;
+    line-height: 20vh;
     font-family: 'Open Sans CondBold';
     text-align: right;
 }
@@ -244,7 +260,7 @@ input::placeholder, select::placeholder, textarea::placeholder {
     /* transform: translateY(-1vh); */
 }
 
-.feature-monthly , .feature-onetime {
+.feature-monthly-editor , .feature-onetime-editor {
     /*border: 0.1vw solid white;*/
     width: 50%;
     /* padding: 0.3vw; */
