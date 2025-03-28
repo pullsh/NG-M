@@ -163,10 +163,10 @@ body {
 .background-controls {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 20vw;
+    right: 0;
+    /* width: 25vw; */
     display: flex;
-    justify-content: space-between;
+    gap: 2vw;
     padding: 10px;
     box-sizing: border-box;
 }
