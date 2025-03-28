@@ -146,7 +146,7 @@
                 providerSpecsList: document.getElementById('providerSpecsList').value.split(',').map(item => item.trim()),
                 productName: document.getElementById('productName').value,
                 productSpecsList: document.getElementById('productSpecsList').value.split(',').map(item => item.trim()),
-                backgroundVideo: document.getElementById('backgroundVideo').querySelector('source').src,
+                backgroundVideo: document.getElementById('backgroundVideoInput').files[0] ? `videos/${document.getElementById('backgroundVideoInput').files[0].name}` : '',
                 isLightMode: document.getElementById('lightModeToggle').checked,
                 logoAnimationSrc: document.getElementById('lightModeToggle').checked
                     ? 'images/next gen mobil motion.lottie'
