@@ -72,8 +72,8 @@
         </div>
     </div>
     <div class="background-controls">
-        <label for="backgroundVideoInput">Hintergrund:</label>
-        <input type="file" id="backgroundVideoInput" accept="video/*" onchange="updateBackgroundVideo()">
+        <label class="background-upload" for="backgroundVideoInput">Hintergrund</label>
+        <input type="file" id="backgroundVideoInput" accept="video/*" onchange="updateBackgroundVideo()"  hidden/>
         <label for="lightModeToggle">Light Mode:</label>
         <input type="checkbox" id="lightModeToggle" onchange="toggleLightMode()">
     </div>

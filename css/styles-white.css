@@ -36,9 +36,8 @@ body {
     object-fit: cover;
     z-index: -1;
     mix-blend-mode: exclusion;
-    filter: hue-rotate(191deg);
-    opacity: 30%;
-    /* filter: brightness(0.6) contrast(1.4) hue-rotate(20deg); */
+    filter: hue-rotate(191deg) brightness(0.2) contrast(1);
+    opacity: 50%;
 }
 
 .spotlight {
@@ -342,17 +341,6 @@ h1, h2, h3, h4, h5, p , ul {
     gap: 10px;
 }
 
-.background-controls {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    /* width: 25vw; */
-    display: flex;
-    gap: 2vw;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
 input, select, textarea, label, span {
     width: 100%;
     /* padding: 10px; */
@@ -364,7 +352,7 @@ input, select, textarea, label, span {
 }
 
 option {
-    background-color: #000000;
+    background-color: white;
 }
 
 input::placeholder, select::placeholder, textarea::placeholder {
@@ -403,4 +391,24 @@ input::placeholder, select::placeholder, textarea::placeholder {
     letter-spacing: 0.15vw;
     line-height: 2vh;
     text-align: right;
+}
+
+.background-controls {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* width: 25vw; */
+    display: flex;
+    gap: 1vw;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.background-upload {
+    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
 }
