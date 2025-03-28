@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor</title>
     <link id="themeStylesheet" rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 <body>
     <video id="backgroundVideo" class="background-video" autoplay loop muted>
         <source src="videos/NextGen_Mobil_BG_4s_loop.webm" type="video/webm">
     </video>
     <div class="logo-header">
-        <video class="logo-animation" autoplay muted>
-            <source src="videos/NG_Mobil_Logo_BildWort_inverted_Motiongraphic.webm" type="video/webm">
-        </video>
-        <img id="partnerCert" class="partner-cert" src="images/partner-cert.svg" alt="Partner Certification">
+        <dotlottie-player id="logoAnimation" class="logo-animation-editor" src="images/next gen mobil motion_inverted.lottie" 
+            background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" playMode="forwards" autoplay>
+        </dotlottie-player>
+        <img id="partnerCert" class="partner-cert-editor" src="images/partner-cert.svg" alt="Partner Certification">
     </div>
     <div class="container">
-        <div class="provider-features">
+        <div class="provider-features-editor">
             <div class="provider-logo-container">
                 <select id="providerLogoSelect" class="provider-logo-select">
                     <option value="images/logos/1und1_logo.svg">1&1</option>
@@ -43,7 +44,7 @@
             </div>
             <textarea id="featureAnnotation" class="feature-annotation" placeholder="Fußnote"></textarea>
         </div>
-        <div class="middle-product-image">
+        <div class="middle-product-image-editor">
             <input type="file" id="productImage" class="product-image" accept="image/*" onchange="previewProductImage()" style="width: auto;">
             <img id="productImagePreview" class="product-image-preview" src="" alt="Produktbild Vorschau" style="min-width: 100%;">
             <div class="slider-container">
@@ -56,7 +57,7 @@
                 <button onclick="downloadHTML()">Datei speichern (HTML)</button>
             </div>
         </div>
-        <div class="product-specs">
+        <div class="product-specs-editor">
             <img id="productSpecsLine" class="product-specs-line" src="images/product-specs-line.svg" alt="Product Specs Line">
             <div class="product-specs-right">
                 <input type="text" id="contractName" class="contract-name" placeholder="Vertrag">
