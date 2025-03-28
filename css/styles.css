@@ -294,6 +294,7 @@ h1, h2, h3, h4, h5, p , ul {
 .logo-animation-editor {
     position: relative;
     width: 70%;
+    transform: translate(33%, -91%) scale(0.2);
 }
 
 .partner-cert-editor {
