@@ -41,6 +41,7 @@ body {
 }
 
 .spotlight {
+    display: none;
     position: absolute;
     mix-blend-mode: plus-lighter;
     opacity: 40%;
