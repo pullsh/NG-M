@@ -117,11 +117,17 @@
             const themeStylesheet = document.getElementById('themeStylesheet');
             const logoAnimation = document.getElementById('logoAnimation');
 
+            // Update the stylesheet
             themeStylesheet.href = isLightMode ? 'css/styles-white.css' : 'css/styles.css';
+
+            // Destroy the current animation (if supported) and update the source
+            if (logoAnimation.animation) {
+                logoAnimation.animation.destroy(); // Destroy the current animation
+            }
             logoAnimation.src = isLightMode
                 ? 'images/next gen mobil motion.lottie'
                 : 'images/next gen mobil motion_inverted.lottie';
-            logoAnimation.load();
+            logoAnimation.load(); // Reload the animation
         }
 
         function downloadHTML() {
