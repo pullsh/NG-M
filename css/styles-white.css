@@ -45,8 +45,9 @@ body {
     position: absolute;
     mix-blend-mode: plus-lighter;
     opacity: 40%;
-    width: 100%;
-    top: -50%;
+    width: 87%;
+    top: -22%;
+    left: 8%;
     rotate: 14deg;
     animation: fadeIn 1s ease 4s backwards;
 }
@@ -64,6 +65,7 @@ body {
 
 .logo-animation {
     position: relative;
+    width: 70%;
     animation: towards-topright 2s ease 3s both;
 }
 
@@ -279,7 +281,6 @@ h1, h2, h3, h4, h5, p , ul {
 
 .feature-annotation {
     font-size: 1.5vw;
-    max-width: 85%;
     font-family: 'Open Sans CondLight';
     text-align: right;
 }

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor</title>
-    <link rel="stylesheet" href="css/editor-styles.css">
+    <link id="themeStylesheet" rel="stylesheet" href="css/editor-styles.css">
 </head>
 <body>
-    <video class="background-video" autoplay loop muted>
+    <video id="backgroundVideo" class="background-video" autoplay loop muted>
         <source src="videos/NextGen_Mobil_BG_4s_loop.webm" type="video/webm">
     </video>
     <div class="logo-header">
@@ -70,6 +70,12 @@
             </div>
         </div>
     </div>
+    <div class="background-controls">
+        <label for="backgroundVideoInput">Hintergrund:</label>
+        <input type="file" id="backgroundVideoInput" accept="video/*" onchange="updateBackgroundVideo()">
+        <label for="lightModeToggle">Light Mode:</label>
+        <input type="checkbox" id="lightModeToggle" onchange="toggleLightMode()">
+    </div>
 
     <script>
         document.getElementById('providerLogoSelect').addEventListener('change', function() {
@@ -94,6 +100,23 @@
             document.getElementById('imageWidthValue').textContent = `${value}%`;
         }
 
+        function updateBackgroundVideo() {
+            const file = document.getElementById('backgroundVideoInput').files[0];
+            if (file) {
+                const video = document.getElementById('backgroundVideo');
+                const source = video.querySelector('source');
+                const fileURL = URL.createObjectURL(file);
+                source.src = fileURL;
+                video.load();
+            }
+        }
+
+        function toggleLightMode() {
+            const isLightMode = document.getElementById('lightModeToggle').checked;
+            const themeStylesheet = document.getElementById('themeStylesheet');
+            themeStylesheet.href = isLightMode ? 'css/styles-white.css' : 'css/editor-styles.css';
+        }
+
         function downloadHTML() {
             const data = {
                 providerLogo: document.getElementById('providerLogoSelect').value,
@@ -110,6 +133,8 @@
                 providerSpecsList: document.getElementById('providerSpecsList').value.split(',').map(item => item.trim()),
                 productName: document.getElementById('productName').value,
                 productSpecsList: document.getElementById('productSpecsList').value.split(',').map(item => item.trim()),
+                backgroundVideo: document.getElementById('backgroundVideo').querySelector('source').src,
+                isLightMode: document.getElementById('lightModeToggle').checked
             };
 
             const fileName = document.getElementById('fileName').value || 'data';
@@ -121,12 +146,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${fileName}</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/${data.isLightMode ? 'styles-white.css' : 'styles.css'}">
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"><\/script>
 </head>
 <body>
     <video class="background-video" autoplay loop muted>
-        <source src="videos/NextGen_Mobil_BG_4s_loop.webm" type="video/webm">
+        <source src="${data.backgroundVideo}" type="video/webm">
     </video>
     <img class="spotlight" src="images/spotlight.png" alt="spotlight">
     <div class="logo-header">

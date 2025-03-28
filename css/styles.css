@@ -237,7 +237,7 @@ h1, h2, h3, h4, h5, p , ul {
 
 .feature-price-big1 {
     font-size: 13vw;
-    line-height: 1vh;
+    line-height: 20vh;
     font-family: 'Open Sans CondBold';
     text-align: right;
 }
