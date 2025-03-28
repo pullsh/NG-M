@@ -108,11 +108,11 @@
         function updateBackgroundVideo() {
             const file = document.getElementById('backgroundVideoInput').files[0];
             if (file) {
-                const video = document.getElementById('backgroundVideo');
-                const source = video.querySelector('source');
-                const fileURL = URL.createObjectURL(file);
-                source.src = fileURL;
-                video.load();
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('backgroundVideo').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
             }
         }
 
