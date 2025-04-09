@@ -1,0 +1,408 @@
+/* General Styles */
+@font-face {
+    font-family: 'Open Sans CondBold';
+    src: url('../Open Sans/OpenSans-CondBold.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans CondLightitalic';
+    src: url('../Open Sans/OpenSans-CondLightitalic.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans CondLight';
+    src: url('../Open Sans/OpenSans-CondLight.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans Semibold';
+    src: url('../Open Sans/OpenSans-Semibold.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+/* Background Video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6) contrast(1.4) hue-rotate(20deg);
+}
+
+.spotlight {
+    position: absolute;
+    mix-blend-mode: plus-lighter;
+    opacity: 40%;
+    width: 87%;
+    top: -22%;
+    left: 8%;
+    rotate: 14deg;
+    animation: fadeIn 1s ease 4s backwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 40%; }
+}
+
+.logo-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.logo-animation {
+    position: relative;
+    width: 70%;
+    animation: towards-topright 2s ease 3s both;
+}
+
+@keyframes towards-topright {
+    from { transform: translate(-50%, -40%) scale(1); }
+    to { transform: translate(70%, -105%) scale(0.25); }
+}
+
+.partner-cert {
+    position: absolute;
+    bottom: 150%;
+    left: 27vw;
+    width: 8vw;
+    animation: slideInTop 700ms ease-out 4s backwards;
+}
+
+/* Container for content */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Provider Features */
+.provider-features, .provider-features-editor{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.provider-logo {
+    display: flex;
+    background-color: white;
+    border: 1.3vw solid white;
+    height: 25vh;
+    margin-block-end: 4vh;
+}
+
+/* Feature Price Big */
+.feature-price-big-columns {
+    display: flex;
+    align-items: center;
+}
+
+.feature-price-big-left {
+    display: flex;
+    position: relative;
+    left: 2.1vw;
+}
+
+.feature-price-big-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Feature Price Small */
+.feature-price-small-columns {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+/* Product Image */
+.middle-product-image, .middle-product-image-editor {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product-image {
+    min-width: 90%;
+}
+
+/* Product Specs */
+.product-specs, .product-specs-editor {
+    width: 25%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 2vw;
+    position: relative;
+    top: 6vh;
+}
+
+.product-specs-line {
+    height: 72%;
+}
+
+.product-specs-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1vh;
+}
+
+/* Individual Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img , .logo-animation {
+    filter: drop-shadow(-0.1vw 0.5vw 0.5vw rgba(0, 0, 0, 0.5))
+}
+
+/* Text styles */
+h1, h2, h3, h4, h5, p , ul {
+    margin: 5px 0;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from { transform: translateX(-200%); opacity: 1; }
+    80% { transform: translateX(5%); }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(200%); opacity: 1; }
+    80% { transform: translateX(-5%); }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInBottom {
+    from { transform: translateY(200%); opacity: 1; }
+    80% { transform: translateY(-5%); }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInTop {
+    from { transform: translateY(-200%); opacity: 1; }
+    80% { transform: translateY(15%); }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes hoverFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6%); }
+    100% { transform: translateY(0); }
+}
+
+/* Apply animations */
+.provider-features {
+    animation: slideInLeft 700ms ease-out 4s;
+    animation-fill-mode: backwards;
+}
+
+.product-specs {
+    animation: slideInRight 700ms ease-out 4s;
+    animation-fill-mode: backwards;
+}
+
+.middle-product-image {
+    animation: slideInBottom 700ms ease-out 4s backwards, hoverFloat 4s infinite ease-in-out 4700ms;
+}
+
+/* Additional styles for missing classes */
+.feature-data-limit {
+    width: 80%;
+}
+
+.feature-price-big1 {
+    font-size: 13vw;
+    line-height: 20vh;
+    font-family: 'Open Sans CondBold';
+    text-align: right;
+}
+
+.feature-price-big2 {
+    font-size: 7vw;
+    line-height: 16vh;
+    font-family: 'Open Sans CondBold';
+    text-align: left;
+    transform: translateY(-1vh);
+}
+
+.feature-monthly , .feature-onetime {
+    /*border: 0.1vw solid white;*/
+    width: min-content;
+    padding: 0.3vw;
+    font-size: 1.2vw;
+    font-family: 'Open Sans Semibold';
+    /* text-transform: uppercase; */
+    letter-spacing: 0.15vw;
+    line-height: 2vh;
+    text-align: right;
+}
+
+.feature-monthly {
+    font-size: 2.5vw;
+}
+
+.feature-price-small {
+    font-size: 7vw;
+    font-family: 'Open Sans CondBold';
+    text-align: right;
+}
+
+.feature-annotation {
+    font-size: 1.5vw;
+    font-family: 'Open Sans CondLight';
+    text-align: right;
+}
+
+.product-name , .contract-name {
+    font-size: 3vw;
+    font-family: 'Open Sans CondBold';
+}
+
+.product-specs-list , .provider-specs-list {
+    font-size: 1.5vw;
+    font-family: 'Open Sans CondLight';
+    list-style-type: disc;
+}
+
+/* styles für editor */
+
+.logo-animation-editor {
+    position: relative;
+    width: 70%;
+    transform: translate(70%, -105%) scale(0.25);
+}
+
+.partner-cert-editor {
+    position: absolute;
+    bottom: 150%;
+    left: 27vw;
+    width: 8vw;
+}
+
+.provider-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.provider-logo-select {
+    width: auto;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.provider-logo-preview {
+    height: 25vh;
+    border: 1.3vw solid white;
+    background-color: white;
+}
+
+.product-image-preview {
+    width: auto;
+    max-width: 90%;
+    margin-top: 10px;
+}
+
+.feature-data-limit-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input, select, textarea, label, span {
+    width: 100%;
+    /* padding: 10px; */
+    margin: 5px 0;
+    /* font-size: 1rem; */
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+option {
+    background-color: #000000;
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.download-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.download-section input {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.download-section button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.feature-monthly-editor , .feature-onetime-editor {
+    /*border: 0.1vw solid white;*/
+    width: 50%;
+    /* padding: 0.3vw; */
+    font-size: 1.2vw;
+    font-family: 'Open Sans Semibold';
+    /* text-transform: uppercase; */
+    letter-spacing: 0.15vw;
+    line-height: 2vh;
+    text-align: right;
+}
+
+.background-controls {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* width: 25vw; */
+    display: flex;
+    gap: 1vw;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.background-upload {
+    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor</title>
-    <link id="themeStylesheet" rel="stylesheet" href="css/styles.css">
+    <link id="themeStylesheet" rel="stylesheet" href="css/styles-webm.css">
 </head>
 <body>
     <video id="backgroundVideo" class="background-video" autoplay loop muted>
@@ -150,8 +150,8 @@ document.getElementById('backgroundVideo').src = e.target.result;
                     : 'videos/NextGen_Mobil_BG_4s_loop.webm', // Default video
                 isLightMode: document.getElementById('lightModeToggle').checked,
                 logoAnimationSrc: document.getElementById('lightModeToggle').checked
-                    ? 'images/next gen mobil motion.lottie'
-                    : 'images/next gen mobil motion_inverted.lottie'
+                    ? 'videos/NextGenMobil_Logo_Motiongraphic.webm'
+                    : 'videos/NextGenMobil_Logo_Motiongraphic_inverted.webm'
             };
 
             const fileName = document.getElementById('fileName').value || 'data';
@@ -172,9 +172,9 @@ document.getElementById('backgroundVideo').src = e.target.result;
     </video>
     <img class="spotlight" src="images/spotlight.png" alt="spotlight">
     <div class="logo-header">
-        <dotlottie-player id="logoAnimation" class="logo-animation" src="${data.logoAnimationSrc}" 
-            background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" playMode="forwards" autoplay>
-        </dotlottie-player>
+        <video id="logoAnimation" class="logo-animation" autoplay muted>
+            <source src="${data.logoAnimationSrc}" type="video/webm">
+        </video>
         <img id="partnerCert" class="partner-cert" src="images/partner-cert.svg" alt="Partner Certification">
     </div>
     <div class="container">
