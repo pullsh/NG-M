@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor</title>
-    <link id="themeStylesheet" rel="stylesheet" href="css/styles.css">
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link id="themeStylesheet" rel="stylesheet" href="css/styles-webm.css">
 </head>
 <body>
     <video id="backgroundVideo" class="background-video" autoplay loop muted>
         <source src="videos/NextGen_Mobil_BG_4s_loop.webm" type="video/webm">
     </video>
     <div class="logo-header">
-        <!-- Two lottie players for light and dark mode -->
-        <dotlottie-player id="logoAnimationDark" class="logo-animation-editor" src="images/next gen mobil motion_inverted.lottie" 
-            background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" playMode="forwards" autoplay>
-        </dotlottie-player>
-        <dotlottie-player id="logoAnimationLight" class="logo-animation-editor" src="images/next gen mobil motion.lottie" 
-            background="transparent" speed="1" style="width: 100%; height: 100%; display: none;" direction="1" playMode="forwards" autoplay>
-        </dotlottie-player>
+        <!-- Two video players for light and dark mode -->
+        <video id="logoAnimationDark" class="logo-animation-editor" src="videos/NextGenMobil_Logo_Motiongraphic_inverted.webm" autoplay muted></video>
+        <video id="logoAnimationLight" class="logo-animation-editor" src="videos/NextGenMobil_Logo_Motiongraphic.webm" autoplay muted style="display: none;"></video>
         <img id="partnerCert" class="partner-cert-editor" src="images/partner-cert.svg" alt="Partner Certification">
     </div>
     <div class="container">
@@ -125,7 +120,7 @@ document.getElementById('backgroundVideo').src = e.target.result;
             // Update the stylesheet
             themeStylesheet.href = isLightMode ? 'css/styles-white.css' : 'css/styles.css';
 
-            // Toggle visibility of the two animations
+            // Toggle visibility of the two video players
             logoAnimationDark.style.display = isLightMode ? 'none' : 'block';
             logoAnimationLight.style.display = isLightMode ? 'block' : 'none';
         }
@@ -151,8 +146,8 @@ document.getElementById('backgroundVideo').src = e.target.result;
                     : 'videos/NextGen_Mobil_BG_4s_loop.webm', // Default video
                 isLightMode: document.getElementById('lightModeToggle').checked,
                 logoAnimationSrc: document.getElementById('lightModeToggle').checked
-                    ? 'images/next gen mobil motion.lottie'
-                    : 'images/next gen mobil motion_inverted.lottie'
+                    ? 'videos/NextGenMobil_Logo_Motiongraphic.webm'
+                    : 'videos/NextGenMobil_Logo_Motiongraphic_inverted.webm'
             };
 
             const fileName = document.getElementById('fileName').value || 'data';
@@ -173,9 +168,9 @@ document.getElementById('backgroundVideo').src = e.target.result;
     </video>
     <img class="spotlight" src="images/spotlight.png" alt="spotlight">
     <div class="logo-header">
-        <dotlottie-player id="logoAnimation" class="logo-animation" src="${data.logoAnimationSrc}" 
-            background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" playMode="forwards" autoplay>
-        </dotlottie-player>
+        <video id="logoAnimation" class="logo-animation" autoplay muted>
+            <source src="${data.logoAnimationSrc}" type="video/webm">
+        </video>
         <img id="partnerCert" class="partner-cert" src="images/partner-cert.svg" alt="Partner Certification">
     </div>
     <div class="container">

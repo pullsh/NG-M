@@ -67,12 +67,12 @@ body {
 
 @keyframes towards-topright {
     from { transform: translate(-50%, -40%) scale(1); }
-    to { transform: translate(33%, -91%) scale(0.2); }
+    to { transform: translate(70%, -110%) scale(0.26); }
 }
 
 .partner-cert {
     position: absolute;
-    bottom: 138%;
+    bottom: 155%;
     left: 27vw;
     width: 8vw;
     animation: slideInTop 700ms ease-out 4s backwards;
@@ -294,12 +294,12 @@ h1, h2, h3, h4, h5, p , ul {
 .logo-animation-editor {
     position: relative;
     width: 70%;
-    transform: translate(33%, -91%) scale(0.2);
+    transform: translate(70%, -110%) scale(0.26);
 }
 
 .partner-cert-editor {
     position: absolute;
-    bottom: 138%;
+    bottom: 155%;
     left: 27vw;
     width: 8vw;
 }
