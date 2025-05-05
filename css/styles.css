@@ -101,6 +101,7 @@ body {
     background-color: white;
     border: 1.3vw solid white;
     height: 25vh;
+    max-width: 35vh;
     margin-block-end: 4vh;
 }
 
@@ -318,6 +319,7 @@ h1, h2, h3, h4, h5, p , ul {
 
 .provider-logo-preview {
     height: 25vh;
+    max-width: 35vh;
     border: 1.3vw solid white;
     background-color: white;
 }
